@@ -13,7 +13,7 @@
     
         <div class="user-style">
             {% if current_user.is_authenticated %}
-            <h1 class="subtitle">Hello, {{current_user.username}}</h1>
+            <h1 class="subtitle font-sans">Hello, {{current_user.username}}</h1>
             <div class="white-style">
                 <div class="w-full text-center">
                     <h6>
@@ -42,19 +42,30 @@
                     </form>
                     
                     <h6 class="mt-8 lg:mt-16">
-                        Your Favorite Albums
+                        Your Journals
+                    </h6>
+                    {% if current_user.is_authenticated %}
+                    {% for journal in journals %}
+                        {% if current_user.id == journal.from_user_id %}
+                        <img src="{{ url_for('static', filename=journal.picture_path) }}" class="transform-scale shadow-lg">
+                        {% endif %}
+                    {% endfor %}
+                    {% endif %}
+
+                    <h6 class="mt-8 lg:mt-16">
+                        Your Favorite Journal
                     </h6>
                     <div class="wrap-style">                 
                     {% set isLiked = {'isLiked':False} %}
-                    {% for like_album in like_albums %}
-                        {% for album in albums %}
-                        {% if like_album.from_user_id == current_user.id and like_album.to_album_id == album.id %}
+                    {% for like_journal in like_journals %}
+                        {% for journal in journals %}
+                        {% if like_journal.from_user_id == current_user.id and like_journal.to_journal_id == journal.id %}
                         <div class="img-size">
                             <a href="{{ url_for('jounal.journal', _anchor=journal.title) }}">
-                                <img src="{{ url_for('static', filename=journal.picture_path_1) }}" class="transform-scale shadow-lg">
+                                <img src="{{ url_for('static', filename=journal.picture_path) }}" class="transform-scale shadow-lg">
                             </a>
-                            <p class="small font-semibold mt-2">{{ album.name }}</p>
-                            <p class="small mt-1">{{ album.title }}</p>
+                            <p class="small font-semibold mt-2">{{ journal.country }}</p>
+                            <p class="small mt-1">{{ journal.title }}</p>
                         </div>
                         {% if isLiked.update({'isLiked':True}) %}{% endif %}
                         {% endif %}

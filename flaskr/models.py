@@ -50,17 +50,15 @@ class Journal(db.Model):
     from_user_id = db.Column(
         db.Integer, db.ForeignKey('users.id'), index=True
     )
-    start_date = db.Column(db.DateTime, nullable = False, default=datetime.strftime(datetime.today(), '%Y %b %d'))
-    end_date = db.Column(db.DateTime, nullable = False, default=datetime.strftime(datetime.today(), '%Y %b %d'))
+    start_date = db.Column(db.DateTime, default=datetime.strftime(datetime.today(), '%Y/%m/%d'))
+    end_date = db.Column(db.DateTime, default=datetime.strftime(datetime.today(), '%Y/%m/%d'))
     country = db.Column(db.String(128))
     city = db.Column(db.String(128))
     title = db.Column(db.String(128))
     comment = db.Column(db.Text)
-    picture_path_1 = db.Column(db.Text)
-    picture_path_2 = db.Column(db.Text)
-    picture_path_3 = db.Column(db.Text)
+    picture_path = db.Column(db.Text)
 
-    def __init__(self, from_user_id, start_date, end_date, country, city, title, comment, picture_path_1, picture_path_2, picture_path_3):
+    def __init__(self, from_user_id, start_date, end_date, country, city, title, comment, picture_path):
         self.from_user_id = from_user_id
         self.start_date = start_date
         self.end_date = end_date
@@ -68,12 +66,11 @@ class Journal(db.Model):
         self.city = city
         self.title = title
         self.comment = comment
-        self.picture_path_1 = picture_path_1
-        self.picture_path_2 = picture_path_2
-        self.picture_path_3 = picture_path_3
+        self.picture_path = picture_path
 
     def create_new_journal(self):
         db.session.add(self)
+
 
 
 class LikeJournal(db.Model):

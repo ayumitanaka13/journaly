@@ -26,8 +26,9 @@
     <meta name="twitter:description" content="A web app for people who love Japanese City Pop">
     <meta name="twitter:image" content="https://japanese-city-pop.herokuapp.com/static/image/ogp.png">
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="/static/css/public/style.css">
-    <link rel="stylesheet" href="/static/css/base.css"> -->
+    <link rel="stylesheet" href="/static/css/public/style.css">
+    <!-- <link rel="stylesheet" href="/static/css/base.css"> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
@@ -50,7 +51,7 @@
     <title>Journaly</title>
 </head>
 
-<body id="top">
+<body class="bg-gray-100 text-gray-700" id="top">
     {% block content %}
 
     {% block header %}
@@ -79,17 +80,17 @@
                         <a class="menu-block" href="{{ url_for('app.home') }}">Home</a>
                     </li>
                     <li class="menu-ml">
-                        <a class="menu-block" href="{{ url_for('journal.journal') }}">Journal</a>
-                    </li>
-                    <li class="menu-ml">
-                        <a class="menu-block" href="{{ url_for('add_journal.add_journal') }}">Add Journal</a>
+                        <a class="menu-block" href="{{ url_for('journal.journal') }}">Read Journal</a>
                     </li>
                     {% if current_user.is_authenticated %}
                     <li class="menu-ml">
-                        <a class="menu-block" href="{{url_for('logout.logout')}}">Logout</a>
+                        <a class="menu-block" href="{{ url_for('add_journal.add_journal') }}">Write Journal</a>
                     </li>
                     <li class="menu-ml">
                         <a class="menu-block" href="{{url_for('user.user')}}">User</a>
+                    </li>
+                    <li class="menu-ml">
+                        <a class="menu-block" href="{{url_for('logout.logout')}}">Logout</a>
                     </li>
                     {% else %}
                     <li class="menu-ml">

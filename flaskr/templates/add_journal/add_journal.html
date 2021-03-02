@@ -9,8 +9,10 @@
 <div class="layout-3">
     <h1 class="subtitle">Sign Up</h1>
     <div class="white-style">
-        <form method="POST" class="form-style">
+        {% if current_user.is_authenticated %}
+        <form method="POST" enctype="multipart/form-data" class="form-style">
             {{form.csrf_token}}
+            {{ form.from_user_id(value=current_user.id) }}
             <h6>
                 {{render_field(form.start_date, class="input-form")}}
             </h6>
@@ -30,12 +32,13 @@
                 {{render_field(form.comment, class="input-form")}}
             </h6>
             <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.picture_path_1, class="input-form")}}
+                {{render_field(form.picture_path, class="input-form")}}
             </h6>
             <h6 class="mt-4 lg:mt-8">
                 {{form.submit(class="h-full btn-blue")}}
             </h6>
         </form>
+        {% endif %}
     </div>
 
     {% block back %}

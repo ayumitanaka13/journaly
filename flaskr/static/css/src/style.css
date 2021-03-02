@@ -6,10 +6,10 @@
 
 @layer base {
     body {
-        @apply text-white;
+        @apply text-gray-700;
     }
     h1 {
-        @apply font-codystar font-black animate-pulse;
+        @apply font-poppins font-black;
     }
     h2 {
         @apply font-poppins font-bold text-5xl lg:text-6xl 2xl:text-7xl;

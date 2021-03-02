@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms.form import Form
 from wtforms.fields import (
-    StringField, FileField, PasswordField, DateField,
+    StringField, FileField, PasswordField, DateField, MultipleFileField,
     SelectField, SubmitField, HiddenField, TextAreaField
 )
 from wtforms.validators import DataRequired, Email, EqualTo
@@ -45,19 +45,9 @@ class UserForm(FlaskForm):
 
 
 class JournalForm(FlaskForm):
-    # start_date = DateField(
-    #     'Start Date',
-    #     format='%Y-%m-%d',
-    #     validators = (validators.Optional())
-    # )
-    # end_date = DateField(
-    #     'End Date',
-    #     format='%Y-%m-%d',
-    #     validators = (validators.Optional())
-    #     # validators = [DataRequired('please select end date')]
-    # )
-    start_date = DateField('Start Date', format='%m/%d/%Y')
-    end_date = DateField('End Date', format='%m/%d/%Y')
+    from_user_id = HiddenField()
+    start_date = DateField('Start Date', format='%Y/%m/%d')
+    end_date = DateField('End Date', format='%Y/%m/%d')
     country = SelectField(
         'Country',
         choices=[('Australia'), ('Brazil'), ('Canada')]
@@ -72,10 +62,7 @@ class JournalForm(FlaskForm):
     comment = TextAreaField(
         'Journal', validators=[DataRequired()]
     )
-    picture_path_1 = FileField('')
-    picture_path_2 = FileField('')
-    picture_path_3 = FileField('')
-    # picture_path_1 = MultipleFileField('')
+    picture_path = FileField('')
     submit = SubmitField('Submit')
 
 
