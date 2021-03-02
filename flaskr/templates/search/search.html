@@ -1,0 +1,72 @@
+{% from "/_formhelpers.html" import render_field %}
+{% extends "/base.html" %}
+{% block content %}
+
+<div class="base-style">
+    {% block header %}
+    {{ super() }}
+    {% endblock %}
+
+    {% block bg %}
+    {{ super() }}
+    {% endblock %}
+       
+    <div class="layout-2">
+            <h1 class="subtitle">Search</h1>
+            <form method="POST" class="search-form">
+                {{form.csrf_token}}
+                <div class="search-wrap">
+                    <h6 class="search-bar">
+                        {{render_field(form.keyword, class="h-full input-form mt-0 py-2", placeholder="Let's find your city pop!")}}
+                    </h6>
+                    <h6 class="mt-4 md:mt-0">
+                        {{form.submit(class="h-full btn-blue py-2")}}
+                    </h6>
+                </div>
+            </form>
+                    
+            {% if not form.keyword.data %}
+            {% else %}
+            <div class="white-style">
+                <div class="w-full h-48 sm:h-80 overflow-scroll">
+                    <div class="wrap-full-style">
+                    {% set isMatched = {'isMatched':False} %}
+
+                    {% for album in albums %}
+                        {% if form.keyword.data.lower() in album.name.lower() or form.keyword.data.lower() in album.title.lower() %}
+                        <div class="img-size m-2">
+                            <a href="{{ url_for('history.history', _anchor=album.name) }}">
+                                <img src="{{ url_for('static', filename=album.album_picture_path) }}" class="transform-scale shadow-lg">
+                            </a>
+                            <p class="small font-semibold mt-2">{{ album.name }}</p>
+                            <p class="small mt-1">{{ album.title }}</p>
+                        </div>
+                        {% if isMatched.update({'isMatched':True}) %}{% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% for artist in artists %}
+                        {% if form.keyword.data.lower() in artist.name.lower() or form.keyword.data.lower() in artist.title.lower() %}
+                        <div class="img-size m-2">
+                            <a href="{{ url_for('artist.artist', _anchor=artist.name) }}">
+                                <img src="{{ url_for('static', filename=artist.song_picture_path) }}" class="transform-scale shadow-lg">
+                            </a>
+                            <p class="small font-semibold mt-2">{{ artist.name }}</p>
+                            <p class="small mt-1">{{ artist.title }}</p>
+                        </div>
+                        {% if isMatched.update({'isMatched':True}) %}{% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if not isMatched.isMatched %}
+                        <h6 class="text-center">We couldn't find a match for "{{ form.keyword.data }}".</h6>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

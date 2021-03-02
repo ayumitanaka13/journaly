@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="base-style">
+    {% block header %}
+    {{ super() }}
+    {% endblock %}
+
+    {% block bg %}
+    {{ super() }}
+    {% endblock %}
+    
+        <h1 class="subtitle">500 error</h1>
+    </div>
+</div>
+
+{% endblock %}

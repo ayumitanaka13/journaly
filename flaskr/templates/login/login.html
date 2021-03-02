@@ -1,0 +1,34 @@
+{% from "/_formhelpers.html" import render_field %}
+{% extends "/base.html" %}
+{% block content %}
+
+<div class="base-style">
+    {% block header %}
+    {{ super() }}
+    {% endblock %}
+    
+    {% block bg %}
+    {{ super() }}
+    {% endblock %}
+       
+        <div class="layout-3">
+            <h1 class="subtitle">Login</h1>
+            <div class="white-style">
+                <form method="POST" class="form-style">
+                    {{form.csrf_token}}
+                    <h6>
+                        {{render_field(form.email, class="input-form")}}
+                    </h6>
+                    <h6 class="mt-2 lg:mt-4">
+                        {{render_field(form.password, class="input-form")}}
+                    </h6>
+                    <h6 class="mt-4 lg:mt-8">
+                        {{form.submit(class="h-full btn-blue")}}
+                    </h6>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
