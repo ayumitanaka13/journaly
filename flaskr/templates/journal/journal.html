@@ -69,18 +69,18 @@
                     {% set isLiked = {'isLiked':False} %}
                     {% for like_journal in like_journals %}
                         {% if like_journal.from_user_id == current_user.id and like_journal.to_journal_id == journal.id %}
-                            {{ form.submit(value="♥ Liked",　class="btn-pink") }}
+                            {{ form.submit(value="♥ Liked",　class="btn-orange") }}
                         {% if isLiked.update({'isLiked':True}) %}{% endif %}
                         {% endif %}
                     {% endfor %}
                     {% if not isLiked.isLiked %}  
-                        {{ form.submit(class="btn-transparent bg-gray-300") }}
+                        {{ form.submit(class="btn-transparent") }}
                     {% endif %}
                 </form>
                 {% else %}
                 <p class="mt-4">
                     <a href="{{ url_for('signup.signup') }}">
-                        <button class="btn-blue px-3">
+                        <button class="btn-lightorange px-3">
                             ♡ You can save your favs after sign up!
                         </button>
                     </a>

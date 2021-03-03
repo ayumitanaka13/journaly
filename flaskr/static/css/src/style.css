@@ -229,14 +229,23 @@
     .btn-blue {
         @apply bg-blue-400 hover:bg-blue-500 focus:outline-none shadow rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-1 sm:py-2 px-4 xl:px-6;
     }
+    .btn-lightorange {
+        @apply bg-lightorange hover:bg-orange focus:outline-none shadow rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-1 sm:py-2 px-4 xl:px-6;
+    }
     .btn-blue-small {
         @apply bg-blue-400 hover:bg-blue-500 focus:outline-none shadow rounded-full cursor-pointer duration-300 text-white text-xs sm:text-sm py-1 sm:py-2 px-2 md:px-4;
+    }
+    .btn-lightorange-sm {
+        @apply bg-lightorange hover:bg-orange focus:outline-none shadow rounded-full cursor-pointer duration-300 text-white text-xs sm:text-sm py-1 sm:py-2 px-2 md:px-4;
     }
     .btn-pink {
         @apply bg-pink-400 hover:bg-transparent focus:bg-black focus:bg-opacity-5 focus:outline-none border sm:border-2 border-transparent hover:border-white shadow hover:shadow-none rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
     }
+    .btn-orange {
+        @apply bg-orange hover:bg-gray-300 focus:bg-black focus:bg-opacity-5 focus:outline-none border sm:border-2 border-transparent hover:border-gray-300 shadow hover:shadow-none rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
+    }
     .btn-transparent {
-        @apply bg-transparent hover:bg-pink-400 focus:bg-pink-500 focus:outline-none border sm:border-2 border-white hover:border-transparent hover:shadow focus:shadow-inner rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
+        @apply  bg-gray-300 hover:bg-lightorange focus:bg-orange focus:outline-none border sm:border-2 border-gray-300 hover:border-lightorange hover:shadow focus:shadow-inner rounded-full cursor-pointer duration-300 text-gray-700 text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
     }
     .btn-back {
         @apply h-6 md:h-7 lg:h-8 xl:h-12 w-6 md:w-7 lg:w-8 xl:w-12 flex items-center justify-center bg-transparent hover:bg-white border lg:border-2 border-white shadow-none hover:shadow rounded-full duration-300 hover:text-pink-400;
