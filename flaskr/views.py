@@ -1,11 +1,12 @@
 from flask import Blueprint, render_template, redirect, url_for,request
-from flaskr.forms import SearchForm
+from flaskr.models import Journal
 
 bp = Blueprint('app', __name__, url_prefix='')
 
 @bp.route('/')
 def home():
-    return render_template('home.html')
+    journals = Journal.query.all()
+    return render_template('home.html', journals=journals)
 
 @bp.app_errorhandler(404)
 def page_not_found(e):

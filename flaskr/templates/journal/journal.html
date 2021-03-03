@@ -38,7 +38,7 @@
                 <h1>
                     {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
                 </h1>
-                <p class="2xl:text-lg">
+                <p>
                     {{ journal.comment }}
                 </p>
     
@@ -50,7 +50,7 @@
                             {% if user.picture_path %}
                             <img src="{{ url_for('static', filename=user.picture_path) }}" class="icon-style">
                             {% else %}
-                            <img src="/static/image/logoa.jpg" class="icon-style">
+                            <img src="/static/image/logo2.png" class="icon-style">
                             {% endif %}
                         </div>
                         <h6 class="ml-2  font-bold">

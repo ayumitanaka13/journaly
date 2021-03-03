@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       colors: {
         beige: '#f5d7b2',
+        orange: '#ff7400',
+        lightorange: '#ff9a00',
+        darkorange: '#e56800',
       },
       fontFamily: {
         aurore: ['La Belle Aurore', 'cursive'],
