@@ -921,6 +921,7 @@ ul {
   --tw-border-opacity: 1;
   border-color: rgba(55, 65, 81, var(--tw-border-opacity));
   border-radius: 0.25rem;
+  border-width: 1px;
   display: flex;
   align-items: center;
 }
@@ -1777,7 +1778,7 @@ ul {
   border-width: 2px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 640px){
   .icon-style{
     border-width: 4px;
   }
