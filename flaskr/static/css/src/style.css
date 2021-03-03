@@ -245,7 +245,7 @@
         @apply bg-orange hover:bg-gray-300 focus:bg-black focus:bg-opacity-5 focus:outline-none border sm:border-2 border-transparent hover:border-gray-300 shadow hover:shadow-none rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
     }
     .btn-transparent {
-        @apply  bg-gray-300 hover:bg-lightorange focus:bg-orange focus:outline-none border sm:border-2 border-gray-300 hover:border-lightorange hover:shadow focus:shadow-inner rounded-full cursor-pointer duration-300 text-gray-700 text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
+        @apply  bg-gray-300 hover:bg-lightorange focus:bg-orange focus:outline-none border sm:border-2 border-gray-300 hover:border-lightorange hover:shadow focus:shadow-inner rounded-full cursor-pointer duration-300 text-white text-sm sm:text-base py-2 sm:py-1 px-4 sm:px-3;
     }
     .btn-back {
         @apply h-6 md:h-7 lg:h-8 xl:h-12 w-6 md:w-7 lg:w-8 xl:w-12 flex items-center justify-center bg-transparent hover:bg-white border lg:border-2 border-white shadow-none hover:shadow rounded-full duration-300 hover:text-orange;
