@@ -66,7 +66,7 @@
         @apply inline-block hover:opacity-75 duration-300;
     }
     .btn-toggle {
-        @apply flex items-center bg-transparent hover:bg-orange focus:outline-none border border-gray-700 rounded duration-300 py-2 px-3;
+        @apply flex items-center bg-transparent hover:bg-orange focus:outline-none border border-gray-700 hover:border-white hover:text-white rounded duration-300 py-2 px-3;
     }
     /* history.html */
     .albums-style {
@@ -212,7 +212,7 @@
         @apply text-xs sm:text-sm;
     }
     .white-style {
-        @apply flex w-full items-center justify-center bg-white bg-opacity-40 shadow-xl rounded mt-6 lg:mt-8 py-8;
+        @apply flex w-full items-center justify-center bg-white bg-opacity-40 shadow-md rounded mt-8 lg:mt-10 py-8;
     }
     .form-style {
         @apply w-3/4 sm:w-2/3 text-gray-700;
@@ -251,7 +251,7 @@
         @apply h-6 md:h-7 lg:h-8 xl:h-12 w-6 md:w-7 lg:w-8 xl:w-12 flex items-center justify-center bg-transparent hover:bg-white border lg:border-2 border-white shadow-none hover:shadow rounded-full duration-300 hover:text-orange;
     }
     .btn-back-style {
-        @apply fixed bottom-2 md:bottom-3 xl:bottom-4 right-2 md:right-3 xl:right-4;
+        @apply fixed bottom-2 md:bottom-3 xl:bottom-4 right-2 md:right-3 xl:right-4 text-white;
     }
     .input-form {
         @apply w-full bg-white bg-opacity-70 hover:bg-opacity-90 focus:bg-opacity-90 text-gray-400 focus:outline-none shadow rounded-full duration-300 text-sm sm:text-base mt-1 py-1 sm:py-2 px-2 sm:px-4;
