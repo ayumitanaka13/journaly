@@ -29,7 +29,6 @@
             </div>
         </div>
         <div class="flex items-center border-2 w-full h-1/2 2xl:h-1/3 p-2 px-4 rounded">
-        <!-- <div class="flex items-center border-2  w-full h-1/3 p-2 rounded bg-cover bg-no-repeat bg-center" style="background-image: url(/static/image/paper.jpeg);"> -->
             <div>
                 <h1>
                     {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
@@ -39,15 +38,15 @@
                 <div class="w-full flex items-center justify-between border mt-2">
                 {% for user in users %}
                 {% if journal.from_user_id == user.id %}
-                    <div class="w-1/2 items-center flex border">
-                        <div class="img-size">
+                    <div class="w-1/3 items-center flex border-4">
+                        <div class="w-1/3">
                             {% if user.picture_path %}
                             <img src="{{ url_for('static', filename=user.picture_path) }}" class="icon-style">
                             {% else %}
                             <img src="/static/image/logo2.png" class="icon-style">
                             {% endif %}
                         </div>
-                        <h6 class="ml-2  font-bold">
+                        <h6 class="ml-2 font-bold">
                             {{ user.username }}
                         </h6>
                     </div>

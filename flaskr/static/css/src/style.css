@@ -177,7 +177,7 @@
         @apply w-1/2 sm:w-1/4 lg:w-1/6;
     }
     .img-size {
-        @apply w-full sm:w-1/4 lg:w-1/6 p-2 md:p-4 lg:p-0;
+        @apply w-full sm:w-1/4 lg:w-1/5 p-2 md:p-4 lg:p-0;
     }
     /* search.html */
     .wrap-full-style {
