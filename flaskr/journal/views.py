@@ -39,4 +39,4 @@ def journal():
             new_comment.create_comment()
         db.session.commit()
         flash("Your comment has been added!", "success")
-    return render_template('journal/journal.html',  user=user, journals=journals, comments=comments, like_journals=like_journals, form=form, form_c=form_c)
+    return render_template('journal/journal.html',  users=users, journals=journals, comments=comments, like_journals=like_journals, form=form, form_c=form_c)

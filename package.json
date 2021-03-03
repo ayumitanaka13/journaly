@@ -1,7 +1,7 @@
 {
   "name": "Journaly",
   "version": "1.0.0",
-  "description": "![readme](https://user-images.githubusercontent.com/55824449/101867136-4f9b1f80-3b2f-11eb-86a6-947c6db04bcd.jpg)",
+  "description": "Journaly is a web application thar represents journal + journey!",
   "main": "index.js",
   "scripts": {
     "build": "postcss flaskr/static/css/src/style.css -o flaskr/static/css/public/style.css",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayumitanaka13/citypop-app.git"
+    "url": "git+https://github.com/ayumitanaka13/journaly"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ayumitanaka13/citypop-app/issues"
+    "url": "https://github.com/ayumitanaka13/journaly/issues"
   },
-  "homepage": "https://github.com/ayumitanaka13/citypop-app#readme",
+  "homepage": "https://github.com/ayumitanaka13/journaly#readme",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^3.1.3",
     "autoprefixer": "^10.2.4",

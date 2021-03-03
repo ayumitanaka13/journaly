@@ -50,11 +50,11 @@ class JournalForm(FlaskForm):
     end_date = DateField('End Date', format='%Y/%m/%d')
     country = SelectField(
         'Country',
-        choices=[('Australia'), ('Brazil'), ('Canada')]
+        choices=[('Brazil'), ('Canada'), ('Japan'), ('Philippines'), ('Spain')]
     )
     city = SelectField(
         'City',
-        choices=[('Sydney'), ('Tokyo'), ('Vancouver')]
+        choices=[('Barcelona'), ('Manila'), ('Rio de Janeiro'), ('Kyoto'), ('Vancouver')]
     )
     title = StringField(
         'Title', validators=[DataRequired()]

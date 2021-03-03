@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Codystar&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=La+Belle+Aurore&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,22 +8,22 @@
         @apply text-gray-700;
     }
     h1 {
-        @apply font-poppins font-black;
+        @apply font-aurore;
     }
     h2 {
-        @apply font-poppins font-bold text-5xl lg:text-6xl 2xl:text-7xl;
+        @apply font-josefin font-bold text-5xl lg:text-6xl 2xl:text-7xl;
     }
     h3 {
-        @apply font-poppins text-xl sm:text-3xl md:text-4xl lg:text-2xl xl:text-4xl 2xl:text-5xl;
+        @apply font-josefin text-xl sm:text-3xl md:text-4xl lg:text-2xl xl:text-4xl 2xl:text-5xl;
     }
     h4 {
-        @apply font-poppins text-lg sm:text-2xl lg:text-xl 2xl:text-3xl;
+        @apply font-josefin text-lg sm:text-2xl lg:text-xl 2xl:text-3xl;
     }
     h5 {
-        @apply font-poppins text-base sm:text-lg md:text-xl lg:text-lg 2xl:text-2xl;
+        @apply font-josefin text-base sm:text-lg md:text-xl lg:text-lg 2xl:text-2xl;
     }
     h6 {
-        @apply font-poppins text-base md:text-lg lg:text-xl;
+        @apply font-josefin text-base md:text-lg lg:text-xl;
     }
     p {
         @apply text-sm sm:text-base;
@@ -36,14 +35,20 @@
         @apply w-full flex flex-wrap items-center justify-between py-4 lg:py-6;
     }
     ul {
-        @apply font-poppins lg:flex text-lg md:text-xl lg:text-lg;
+        @apply font-josefin lg:flex text-lg md:text-xl lg:text-lg;
     }
 }
 
 @layer components {
+    .photo {
+        @apply w-full absolute top-0 left-0 border-8 border-yellow-50 rounded shadow-md;
+    }
+    .frame {
+        @apply border-8 border-yellow-50 rounded shadow-md;
+    }
     /* base.html */
     .header-style {
-        @apply  lg:sticky top-0 px-8 md:px-12 xl:px-20;
+        @apply lg:sticky top-0 px-8 md:px-12 xl:px-20;
     }
     .nav-bar-style {
         @apply w-full lg:w-auto hidden lg:flex flex-grow lg:items-center mt-2 lg:mt-0;
@@ -65,7 +70,7 @@
     }
     /* history.html */
     .albums-style {
-        @apply min-h-screen w-screen grid grid-cols-3 lg:bg-gradient-to-br from-lightblue to-lightpink static lg:sticky top-0 py-0 lg:py-14;
+        @apply min-h-screen w-screen grid grid-cols-3 static lg:sticky top-0 py-0 lg:py-14;
     }
     .album-style {
         @apply h-full flex items-center col-span-3 lg:col-span-2;
@@ -96,7 +101,7 @@
     }
     /* artist.html */
     .artists-style {
-        @apply min-h-screen w-screen grid grid-cols-2 gap-8 lg:bg-gradient-to-br from-lightblue to-lightpink static lg:sticky top-0 py-0 lg:py-14 px-10 sm:px-8 md:px-12 xl:px-20;
+        @apply min-h-screen w-screen grid grid-cols-2 gap-8 static lg:sticky top-0 py-0 lg:py-14 px-10 sm:px-8 md:px-12 xl:px-20;
     }
     .artist-style {
         @apply h-screen lg:h-full w-full col-span-2 lg:col-span-1 shadow-2xl rounded-lg border-t-2 border-blue-300 p-4 sm:p-6;

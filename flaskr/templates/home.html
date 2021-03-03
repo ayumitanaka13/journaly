@@ -1,17 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="w-full absolute top-1/2 border z-10">
+    <h1 class="title border text-center" style="font-family: 'La Belle Aurore', cursive;">Journaly</h1>
+</div>
+
 <div class="base-style">
     {% block header %}
     {{ super() }}
     {% endblock %}
 
-    {% block bg %}
-    {{ super() }}
-    {% endblock %}
-    
-        <!-- <h1 class="title font-sans">Journaly</h1> -->
+    <div class="grid grid-cols-4 gap-4 w-full h-full border-4">
+    <!-- <div class="grid grid-cols-4 gap-4 w-full h-full border-4" style="background-image:url(/static/image/bg.jpg)"> -->
+        <div class="border relative">
+            <img src="/static/image/vancouver_7.jpg" alt="" class="w-full absolute top-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+        </div>
+        <div class="border relative">
+            <img src="/static/image/vancouver_2.jpg" alt="" class="w-full absolute bottom-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+        </div>
+        <div class="border relative">
+            <img src="/static/image/vancouver_2.jpg" alt="" class="w-full absolute top-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+        </div>
+        <div class="border relative">
+            <img src="/static/image/vancouver_7.jpg" alt="" class="w-full absolute bottom-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+        </div>
     </div>
+
+
 </div>
 
 {% endblock %}

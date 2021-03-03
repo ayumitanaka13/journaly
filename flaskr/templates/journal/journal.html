@@ -2,20 +2,82 @@
 {% extends "/base.html" %}
 {% block content %}
 
+<div class="base-style">
 {% block header %}
 {{ super() }}
 {% endblock %}
 
-{% for journal in journals %}
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full h-full border-2 p-4">
+    {% for journal in journals %}
+    <div class="border-4 border-blue-500 w-full h-full p-4 shadow-md" style="background-image: url(/static/image/paper.jpeg);">
+        <div class="border-2 border-blue-500 w-full h-2/3 flex justify-center relative">
+            <h1 class="absolute top-0 left-0" style="writing-mode: vertical-rl;">
+                {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
+            </h1>
+            <div class="flex justify-center w-2/3 h-full bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-10 shadow">
+                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                    <h1 class="text-4xl text-center">
+                        {{ journal.title }}
+                    </h1>
+                </div>
+            </div>
+            <div class="w-1/3 absolute top-16 right-0 transform rotate-2 flex items-center justify-center">
+                <img src="/static/image/label3.png" alt="" class="w-full shadow">
+                <h1 class="absolute text-3xl text-center">
+                    {{ journal.city }}, {{ journal.country }}
+                </h1>
+            </div>
+        </div>
+        <div class="border-2 border-blue-500 w-full h-1/3 bg-white bg-opacity-50 p-2 rounded">
+            <p class="text-lg text-gray-500">
+                {{ journal.comment }}
 
-{{ journal.start_date.strftime('%Y/%m/%d') }}
-{{ journal.end_date.strftime('%Y/%m/%d') }}
-{{ journal.country }}
-{{ journal.city }}
-{{ journal.title }}
-{{ journal.comment }}
-<img src="{{ url_for('static', filename=journal.picture_path) }}" class="transform-scale shadow-lg">
+                {% for user in users %}
+                {% if journal.from_user_id == user.id %}
+                    {{ user.username }}
+                    {{ user.picture_path }}
+                {% endif %}
+                {% endfor %}
+            </p>
+            <h6>
+                
+            </h6>
+        </div>
+
+            <!-- comment -->
+            <!-- {% if current_user.is_authenticated %}
+            <form method="POST" class="mt-4">
+                {{ form.csrf_token }}
+                {{ form.from_user_id(value=current_user.id) }}
+                {{ form.to_journal_id(value=journal.id) }}
+        
+                {% set isLiked = {'isLiked':False} %}
+                {% for like_journal in like_journals %}
+                    {% if like_journal.from_user_id == current_user.id and like_journal.to_journal_id == journal.id %}
+                        {{ form.submit(value="♥ Liked",　class="btn-pink") }}
+                    {% if isLiked.update({'isLiked':True}) %}{% endif %}
+                    {% endif %}
+                {% endfor %}
+                {% if not isLiked.isLiked %}  
+                    {{ form.submit(class="btn-transparent") }}
+                {% endif %}
+            </form>
+            {% else %}
+            <p class="mt-4">
+                <a href="{{ url_for('signup.signup') }}">
+                    <button class="btn-blue px-3">
+                        ♡ You can save your favs after sign up!
+                    </button>
+                </a>
+            </p>
+            {% endif %} -->
+    </div>    
+
+    {% endfor %}
+</div>    
 
 
-{% endfor %}
+
+</div>
 {% endblock %}

@@ -7,13 +7,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        lightpink: '#ff93cd',
-        lightblue: '#3dbaf4',
-      },
       fontFamily: {
-        codystar: ['Codystar', 'cursive'],
-        poppins: ['Poppins', 'sans-serif'],
+        aurore: ['La Belle Aurore', 'cursive'],
+        josefin: ['Josefin Sans', 'sans-serif'],
       },
     },
   },
