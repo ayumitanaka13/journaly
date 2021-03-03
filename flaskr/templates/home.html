@@ -1,28 +1,73 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="w-full absolute top-1/2 border z-10">
-    <h1 class="title border text-center" style="font-family: 'La Belle Aurore', cursive;">Journaly</h1>
-</div>
 
 <div class="base-style">
     {% block header %}
     {{ super() }}
     {% endblock %}
 
-    <div class="grid grid-cols-4 gap-4 w-full h-full border-4">
-    <!-- <div class="grid grid-cols-4 gap-4 w-full h-full border-4" style="background-image:url(/static/image/bg.jpg)"> -->
-        <div class="border relative">
-            <img src="/static/image/vancouver_7.jpg" alt="" class="w-full absolute top-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+    
+    <div class="grid grid-cols-4 gap-4 w-full h-full border-4 py-4">
+
+        <div class="w-full text-gray-900 text-center absolute top-1/2 left-0 z-10">
+            <h1 class="title">Journaly</h1>
+            <h5 class="mt-10">Go on a journey, Write a journal.</h5>
         </div>
-        <div class="border relative">
-            <img src="/static/image/vancouver_2.jpg" alt="" class="w-full absolute bottom-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+
+        <div class="border">
+            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
+                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
+                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                    <h1 class="text-4xl text-center">
+                        Sunset in Vancouver
+                    </h1>
+                </div>
+            </div>
         </div>
-        <div class="border relative">
-            <img src="/static/image/vancouver_2.jpg" alt="" class="w-full absolute top-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+        <div class="border flex items-end">
+            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
+                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
+                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                    <h1 class="text-4xl text-center">
+                        Sunset in Vancouver
+                    </h1>
+                </div>
+            </div>
         </div>
-        <div class="border relative">
-            <img src="/static/image/vancouver_7.jpg" alt="" class="w-full absolute bottom-0 left-0 border-8 border-yellow-50 rounded shadow-md">
+
+        <div class="border">
+            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
+                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
+                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                    <h1 class="text-4xl text-center">
+                        Sunset in Vancouver
+                    </h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border flex items-end">
+        <!-- <div class="border flex flex-wrap content-between"> -->
+
+            <!-- <div class="flex justify-center w-full h-1/2 bg-no-repeat bg-cover bg-center relative transform -rotate-3 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_2.jpg)">
+                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
+                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                    <h1 class="text-4xl text-center">
+                        Sunset in Vancouver
+                    </h1>
+                </div>
+            </div> -->
+
+            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
+                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
+                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                    <h1 class="text-4xl text-center">
+                        Sunset in Vancouver
+                    </h1>
+                </div>
+            </div>
+
         </div>
     </div>
 
