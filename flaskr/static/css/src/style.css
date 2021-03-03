@@ -197,7 +197,7 @@
         @apply h-screen w-screen px-8 md:px-12 xl:px-20 pb-24 md:pb-32 xl:pb-36;
     }
     .bg-style {
-        @apply h-full w-full flex items-center justify-center bg-cover bg-center bg-no-repeat shadow-lg rounded-lg;
+        @apply h-full w-full flex items-center justify-center;
     }
     .title {
         @apply text-center text-6xl md:text-7xl lg:text-8xl xl:text-9xl;
@@ -215,7 +215,7 @@
         @apply flex w-full items-center justify-center bg-white bg-opacity-40 shadow-xl rounded mt-6 lg:mt-8 py-8;
     }
     .form-style {
-        @apply w-3/4 sm:w-2/3 text-white;
+        @apply w-3/4 sm:w-2/3 text-gray-700;
     }
     .icon-style {
         @apply rounded-full border-2 md:border-4 border-blue-500;

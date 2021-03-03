@@ -7,9 +7,7 @@
     {{ super() }}
     {% endblock %}
 
-    {% block bg %}
-    {{ super() }}
-    {% endblock %}
+    <div class="bg-style borde-4">
     
         <div class="user-style">
             {% if current_user.is_authenticated %}
@@ -44,11 +42,14 @@
                     <h6 class="mt-8 lg:mt-16">
                         Your Journals
                     </h6>
+    
                     {% if current_user.is_authenticated %}
                     {% for journal in journals %}
+                    <div class="w-full flex justify-center border-4">
                         {% if current_user.id == journal.from_user_id %}
                         <img src="{{ url_for('static', filename=journal.picture_path) }}" class="transform-scale shadow-lg">
                         {% endif %}
+                    </div>
                     {% endfor %}
                     {% endif %}
 

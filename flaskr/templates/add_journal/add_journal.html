@@ -2,48 +2,53 @@
 {% extends "/base.html" %}
 {% block content %}
 
+<div class="base-style border-4">
 {% block header %}
 {{ super() }}
 {% endblock %}
+    <div class="bg-style border">
 
-<div class="layout-3">
-    <h1 class="subtitle">Write Journal</h1>
-    <div class="white-style">
-        {% if current_user.is_authenticated %}
-        <form method="POST" enctype="multipart/form-data" class="form-style">
-            {{form.csrf_token}}
-            {{ form.from_user_id(value=current_user.id) }}
-            <h6>
-                {{render_field(form.start_date, class="input-form")}}
-            </h6>
-            <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.end_date, class="input-form")}}
-            </h6>
-            <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.country, class="input-form")}}
-            </h6>
-            <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.city, class="input-form")}}
-            </h6>
-            <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.title, class="input-form")}}
-            </h6>
-            <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.comment, class="input-form")}}
-            </h6>
-            <h6 class="mt-2 lg:mt-4">
-                {{render_field(form.picture_path, class="input-form")}}
-            </h6>
-            <h6 class="mt-4 lg:mt-8">
-                {{form.submit(class="h-full btn-blue")}}
-            </h6>
-        </form>
-        {% endif %}
+    <div class="layout-2 border">
+        <h1 class="subtitle">Write Journal</h1>
+        <div class="white-style">
+        <!-- <div class="white-style bg-cover bg-no-repeat" style="background-image: url(/static/image/paper.jpeg);"> -->
+            <!-- <img src="/static/image/paper6.png" alt="" class="h-full absolute border"> -->
+
+            {% if current_user.is_authenticated %}
+            <form method="POST" enctype="multipart/form-data" class="form-style text-gray-500 z-10">
+                {{form.csrf_token}}
+                {{ form.from_user_id(value=current_user.id) }}
+                <h6 class="w-full flex items-center justify-between border-4">
+                    {{render_field(form.start_date, class="input-form")}}
+                    {{render_field(form.end_date, class="input-form")}}
+                </h6>
+                <h6 class="w-full flex items-center justify-between mt-2 lg:mt-4 border-4">
+                    {{render_field(form.country, class="input-form h-full")}}
+                    {{render_field(form.city, class="input-form h-full")}}
+                </h6>
+                <h6 class="mt-2 lg:mt-4">
+                    {{render_field(form.title, class="input-form")}}
+                </h6>
+                <h6 class="mt-2 lg:mt-4">
+                    {{render_field(form.comment, class="input-form")}}
+                </h6>
+                <h6 class="mt-2 lg:mt-4">
+                    {{render_field(form.picture_path, class="input-form")}}
+                </h6>
+                <h6 class="mt-4 lg:mt-8">
+                    {{form.submit(class="h-full btn-blue")}}
+                </h6>
+            </form>
+            {% endif %}
+        </div>
+    
+        {% block back %}
+        {{ super() }}
+        {% endblock %}
+    
     </div>
 
-    {% block back %}
-    {{ super() }}
-    {% endblock %}
+    </div>
 
 </div>
 {% endblock %}
