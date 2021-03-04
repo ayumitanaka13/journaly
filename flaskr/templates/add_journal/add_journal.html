@@ -2,11 +2,11 @@
 {% extends "/base.html" %}
 {% block content %}
 
-<div class="base-style border-4">
+<div class="base-style min-h-screen border-4">
 {% block header %}
 {{ super() }}
 {% endblock %}
-    <div class="bg-style border">
+    <div class="bg-style h-screen border">
 
     <div class="layout-2 border">
     <!-- <div class="w-full sm:w-5/6 md:w-4/5 xl:w-3/5 2xl:w-1/2 border"> -->
@@ -15,11 +15,11 @@
         <div class="white-style">
 
             {% if current_user.is_authenticated %}
-            <form method="POST" enctype="multipart/form-data" class="form-style font-josefin flex border-4">
+            <form method="POST" enctype="multipart/form-data" class="form-style font-josefin flex flex-wrap lg:flex-nowrap border-4">
                 {{form.csrf_token}}
                 {{ form.from_user_id(value=current_user.id) }}
                 <!-- <div class="w-1/2 mr-2"> -->
-                <div class="w-1/2 flex flex-wrap content-between mr-2">
+                <div class="w-full lg:w-1/3 flex flex-wrap content-between lg:mr-2">
                     <div class="w-full">
                         <p>
                             {{render_field(form.start_date, placeholder="yyyy-mm-dd", class="input-form")}}
@@ -29,7 +29,7 @@
                         </p>
                     </div>
                     <div class="w-full">
-                        <p>
+                        <p class="mt-2 lg:mt-0">
                             {{render_field(form.country, class="input-form")}}
                         </p>
                         <p class="mt-2 lg:mt-4">
@@ -37,8 +37,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-1/2 ml-2">
-                    <p>
+                <div class="w-full lg:w-2/3 lg:ml-2">
+                    <p class="mt-2 lg:mt-0">
                         {{render_field(form.title, class="input-form")}}
                     </p>
                     <p class="mt-2 lg:mt-4">
@@ -48,7 +48,7 @@
                         {{render_field(form.picture_path, class="input-form sm:h-auto")}}
                     </p>
                     <p class="mt-4 lg:mt-8">
-                        {{form.submit(class="h-10 btn-lightorange px-6")}}
+                        {{form.submit(class="h-10 btn-lightorange py-0 sm:py-0 px-6")}}
                     </p>
                 </div>
             </form>

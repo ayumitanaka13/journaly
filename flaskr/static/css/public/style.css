@@ -924,7 +924,7 @@ ul {
 
 .btn-toggle:hover{
   --tw-border-opacity: 1;
-  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+  border-color: rgba(255, 116, 0, var(--tw-border-opacity));
 }
 
 .btn-toggle{
