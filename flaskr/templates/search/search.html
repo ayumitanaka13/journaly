@@ -27,18 +27,24 @@
             {% else %}
             <div class="white-style">
                 <div class="w-full h-48 sm:h-80 overflow-scroll">
-                    <div class="wrap-full-style">
+                    <div class="wrap-full-style h-full">
                     {% set isMatched = {'isMatched':False} %}
 
                     {% for journal in journals %}
                         {% if form.keyword.data.lower() in journal.country.lower() or form.keyword.data.lower() in journal.city.lower() %}
-                        <div class="img-size m-2">
-                            <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
-                                <img src="{{ url_for('static', filename=journal.picture_path) }}" class="transform-scale shadow-lg">
-                            </a>
-                            <p class="font-semibold mt-2">{{ journal.city }}, {{ journal.country }}</p>
-                            <p class="small mt-1">{{ journal.title }}</p>
+
+                        
+                        <div class="flex justify-center w-1/3 h-full bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md m-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                            <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-6">
+                            <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                                <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
+                                <h1 class="text-2xl text-center">
+                                    {{ journal.title }}
+                                </h1>
+                                </a>
+                            </div>
                         </div>
+
                         {% if isMatched.update({'isMatched':True}) %}{% endif %}
                         {% endif %}
                     {% endfor %}
