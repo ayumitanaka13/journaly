@@ -1832,56 +1832,6 @@ ul {
   }
 }
 
-.btn-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
-}
-
-.btn-blue:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
-}
-
-.btn-blue{
-  border-radius: 9999px;
-  cursor: pointer;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.btn-blue:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.btn-blue{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  transition-duration: 300ms;
-}
-
-@media (min-width: 640px){
-  .btn-blue{
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width: 1280px){
-  .btn-blue{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
 .btn-lightorange {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 154, 0, var(--tw-bg-opacity));
