@@ -8,41 +8,47 @@
 {% endblock %}
     <div class="bg-style border">
 
-    <div class="w-4/5 xl:w-3/5 2xl:w-2/3 border">
+    <div class="w-full sm:w-5/6 md:w-4/5 xl:w-3/5 2xl:w-1/2 border">
+    <!-- <div class="layout-2 border"> -->
+    <!-- <div class="w-4/5 2xl:w-2/3 border"> -->
         <h1 class="subtitle">Write Journal</h1>
         <div class="white-style">
 
             {% if current_user.is_authenticated %}
-            <form method="POST" enctype="multipart/form-data" class="form-style text-gray-500 border">
+            <form method="POST" enctype="multipart/form-data" class="form-style border">
                 {{form.csrf_token}}
                 {{ form.from_user_id(value=current_user.id) }}
                 <h6 class="w-full flex items-center justify-between border-2">
-                    {{render_field(form.start_date, class="input-form")}}
-                    {{render_field(form.end_date, class="input-form")}}
+                    <div>
+                        {{render_field(form.start_date, placeholder="yyyy-mm-dd", class="input-form")}}
+                    </div>
+                    <div>
+                        {{render_field(form.end_date, placeholder="yyyy-mm-dd", class="input-form")}}
+                    </div>
                 </h6>
                 <h6 class="h-full w-full flex items-center justify-between mt-2 lg:mt-4 border-2">
-                    {{render_field(form.country, class="input-form")}}
-                    {{render_field(form.city, class="input-form")}}
+                    <div>
+                        {{render_field(form.country, class="input-form")}}
+                    </div>
+                    <div>
+                        {{render_field(form.city, class="input-form")}}
+                    </div>
                 </h6>
                 <h6 class="mt-2 lg:mt-4">
                     {{render_field(form.title, class="input-form")}}
                 </h6>
                 <h6 class="mt-2 lg:mt-4">
-                    {{render_field(form.comment, class="input-form h-auto rounded-3xl", rows="3")}}
+                    {{render_field(form.comment, rows="3", class="input-form h-auto rounded-3xl")}}
                 </h6>
                 <h6 class="mt-2 lg:mt-4">
                     {{render_field(form.picture_path, class="input-form h-auto")}}
                 </h6>
                 <h6 class="mt-4 lg:mt-8">
-                    {{form.submit(class="h-full btn-lightorange")}}
+                    {{form.submit(class="h-10 btn-lightorange px-6")}}
                 </h6>
             </form>
             {% endif %}
         </div>
-    
-        {% block back %}
-        {{ super() }}
-        {% endblock %}
     
     </div>
 

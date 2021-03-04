@@ -212,7 +212,7 @@
         @apply text-xs sm:text-sm;
     }
     .white-style {
-        @apply flex w-full items-center justify-center bg-white bg-opacity-40 shadow-md rounded mt-8 lg:mt-10 py-8;
+        @apply flex w-full items-center justify-center bg-white bg-opacity-40 shadow-md rounded mt-8 xl:mt-10 py-8;
     }
     .form-style {
         @apply w-3/4 sm:w-2/3 text-gray-700;

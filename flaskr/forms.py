@@ -40,21 +40,23 @@ class RegisterForm(FlaskForm):
 
 
 class UserForm(FlaskForm):
-    picture_path = FileField('')
+    picture_path = FileField('', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
 class JournalForm(FlaskForm):
     from_user_id = HiddenField()
-    start_date = DateField('Start Date', format='%Y/%m/%d')
-    end_date = DateField('End Date', format='%Y/%m/%d')
+    start_date = DateField('Start', format='%Y/%m/%d', validators=[DataRequired()])
+    end_date = DateField('End', format='%Y/%m/%d', validators=[DataRequired()])
     country = SelectField(
         'Country',
-        choices=[('Brazil'), ('Canada'), ('Japan'), ('Singapore'), ('Spain')]
+        choices=[u'Country', ('Brazil'), ('Canada'), ('Japan'), ('Singapore'), ('Spain')],
+        validators=[DataRequired()]
     )
     city = SelectField(
         'City',
-        choices=[('Barcelona'), ('Kyoto'), ('Rio de Janeiro'), ('Singapore'), ('Vancouver')]
+        choices=[u'City', ('Barcelona'), ('Kyoto'), ('Rio de Janeiro'), ('Singapore'), ('Vancouver')],
+        validators=[DataRequired()]
     )
     title = StringField(
         'Title', validators=[DataRequired()]
@@ -62,7 +64,7 @@ class JournalForm(FlaskForm):
     comment = TextAreaField(
         'Journal', validators=[DataRequired()]
     )
-    picture_path = FileField('')
+    picture_path = FileField('', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 

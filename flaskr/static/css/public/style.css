@@ -1769,7 +1769,7 @@ ul {
   width: 100%;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1280px){
   .white-style{
     margin-top: 2.5rem;
   }
