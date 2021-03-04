@@ -89,7 +89,7 @@
         @apply min-h-screen w-full grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8;
     }
     .page-style {
-        @apply h-5/6 w-full bg-cover bg-center bg-no-repeat rounded shadow-md;
+        @apply h-5/6 w-full bg-cover bg-center bg-no-repeat rounded shadow-md py-1;
     }
     .page-top-style {
         @apply h-1/2 xl:h-2/3 w-full flex justify-center relative;
@@ -107,7 +107,7 @@
         @apply w-1/3 flex items-center justify-center absolute top-16 right-0 transform rotate-2;
     }
     .photo-h1-2 {
-        @apply text-center text-2xl xl:text-3xl 2xl:text-4xl;
+        @apply text-center text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl;
     }
     .label-h1 {
         @apply absolute text-center text-xs sm:text-lg xl:text-xl 2xl:text-2xl;
@@ -165,7 +165,7 @@
         @apply text-center text-6xl xl:text-7xl;
     }
     .sub-subtitle {
-        @apply animate-none text-xl sm:text-2xl;
+        @apply text-xl sm:text-2xl;
     }
     .small {
         @apply text-xs sm:text-sm;
