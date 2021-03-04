@@ -1682,12 +1682,6 @@ ul {
   background-color: transparent;
 }
 
-.btn-orange:focus{
-  --tw-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.05;
-}
-
 .btn-orange{
   border-color: transparent;
 }
@@ -1727,18 +1721,31 @@ ul {
 .btn-orange{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.btn-orange:hover{
+  --tw-text-opacity: 1;
+  color: rgba(255, 154, 0, var(--tw-text-opacity));
+}
+
+.btn-orange{
   transition-duration: 300ms;
 }
 
 @media (min-width: 640px){
   .btn-orange{
     border-width: 2px;
-    font-size: 1rem;
-    line-height: 1.5rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+}
+
+@media (min-width: 1536px){
+  .btn-orange{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1749,11 +1756,6 @@ ul {
 .btn-transparent:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(255, 154, 0, var(--tw-bg-opacity));
-}
-
-.btn-transparent:focus{
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 116, 0, var(--tw-bg-opacity));
 }
 
 .btn-transparent{
@@ -1799,18 +1801,31 @@ ul {
 .btn-transparent{
   --tw-text-opacity: 1;
   color: rgba(255, 154, 0, var(--tw-text-opacity));
+}
+
+.btn-transparent:hover{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.btn-transparent{
   transition-duration: 300ms;
 }
 
 @media (min-width: 640px){
   .btn-transparent{
     border-width: 2px;
-    font-size: 1rem;
-    line-height: 1.5rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+}
+
+@media (min-width: 1536px){
+  .btn-transparent{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
