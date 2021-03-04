@@ -254,7 +254,7 @@
         @apply fixed bottom-2 md:bottom-3 xl:bottom-4 right-2 md:right-3 xl:right-4 text-white;
     }
     .input-form {
-        @apply w-full bg-white bg-opacity-70 hover:bg-opacity-90 focus:bg-opacity-90 text-gray-400 focus:outline-none shadow rounded-full duration-300 text-sm sm:text-base mt-1 py-1 sm:py-2 px-2 sm:px-4;
+        @apply h-10 w-full bg-white bg-opacity-70 hover:bg-opacity-90 focus:bg-opacity-90 text-gray-400 focus:outline-none shadow rounded-full duration-300 text-sm sm:text-base py-1 sm:py-2 px-2 sm:px-4;
     }
     .transform-scale {
         @apply transform hover:scale-105 ease-linear duration-300;

@@ -2338,9 +2338,9 @@ ul {
 
 .input-form{
   border-radius: 9999px;
+  height: 2.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  margin-top: 0.25rem;
 }
 
 .input-form:focus{
