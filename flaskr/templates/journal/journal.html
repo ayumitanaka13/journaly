@@ -59,7 +59,7 @@
 
                     {% if current_user.is_authenticated %}
                         <!-- like button -->
-                        <form method="POST">
+                        <form method="POST" class="font-josefin">
                             {{ form.csrf_token }}
                             {{ form.from_user_id(value=current_user.id) }}
                             {{ form.to_journal_id(value=journal.id) }}
@@ -77,7 +77,7 @@
                     {% else %}
                         <p>
                             <a href="{{ url_for('signup.signup') }}">
-                                <button class="btn-lightorange-sm px-3">
+                                <button class="btn-lightorange-sm">
                                     ♡ You can save it after sign up!
                                 </button>
                             </a>
