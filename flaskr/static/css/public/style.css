@@ -1107,6 +1107,18 @@ ul {
   --tw-rotate: -2deg;
 }
 
+@media (min-width: 640px){
+  .photo-style-2{
+    width: 66.666667%;
+  }
+}
+
+@media (min-width: 1024px){
+  .photo-style-2{
+    width: 83.333333%;
+  }
+}
+
 .tape-style-2 {
   position: absolute;
   top: -1rem;
@@ -1742,13 +1754,6 @@ ul {
   }
 }
 
-@media (min-width: 1536px){
-  .btn-orange{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
 .btn-transparent {
   background-color: transparent;
 }
@@ -1822,13 +1827,6 @@ ul {
   }
 }
 
-@media (min-width: 1536px){
-  .btn-transparent{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
 .btn-back {
   background-color: transparent;
 }
@@ -1887,7 +1885,7 @@ ul {
 
 .btn-back-style {
   position: fixed;
-  right: 0.5rem;
+  right: 0.25rem;
   bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
