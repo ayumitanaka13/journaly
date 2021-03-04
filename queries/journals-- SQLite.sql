@@ -19,5 +19,5 @@ VALUES (3, 3, "2010-08-08 00:00:00.000000",	"2010-08-10 00:00:00.000000", "Singa
 
 INSERT INTO journals (id, from_user_id, start_date, end_date, country, city, title, comment, picture_path)
 VALUES (4, 1, "2016-03-03 00:00:00.000000",	"2016-03-9 00:00:00.000000", "Spain", "Barcelona", "Oh my, Can’t describe...",
-    "An amazing once-in-a-lifetime experience. You can look at photographs all the time but being there in person is a total experience. The energy of being inside this majestic beautiful basilica is euphoric. We walked by it by night as well. I think it’s looked even more astonishing! We also went to the nearby rooftop and were mesmerized like we were in there.",
+    "An amazing once-in-a-lifetime experience. You can look at photographs all the time but being there in person is a total experience. The energy of being inside this beautiful basilica is euphoric. We walked by it by night as well. I think it’s looked even more astonishing! We also went to the nearby rooftop and were mesmerized like we were in there.",
     "image_journal/1_1614799387.jpg");
