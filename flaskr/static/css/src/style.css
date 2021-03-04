@@ -5,7 +5,7 @@
 
 @layer base {
     body {
-        @apply text-gray-700;
+        @apply　bg-beige text-gray-700;
     }
     h1 {
         @apply font-aurore;
@@ -47,9 +47,6 @@
         @apply border-8 border-yellow-50 rounded shadow-md;
     }
     /* base.html */
-    .header-style {
-        @apply lg:sticky top-0 px-8 md:px-12 xl:px-20;
-    }
     .nav-bar-style {
         @apply w-full lg:w-auto hidden lg:flex flex-grow lg:items-center mt-2 lg:mt-0;
     }
@@ -68,98 +65,27 @@
     .btn-toggle {
         @apply flex items-center bg-transparent hover:bg-orange focus:outline-none border border-gray-700 hover:border-orange hover:text-white rounded duration-300 py-2 px-3;
     }
-    /* history.html */
-    .albums-style {
-        @apply min-h-screen w-screen grid grid-cols-3 static lg:sticky top-0 py-0 lg:py-14;
+    /* home.html */
+    .home-style {
+        @apply h-full w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-0 sm:gap-4 py-0 sm:py-4;
     }
-    .album-style {
-        @apply h-full flex items-center col-span-3 lg:col-span-2;
+    .title-style {
+        @apply w-full absolute bottom-1/3 left-0 z-10 text-center text-gray-900;
     }
-    .album-bg-style {
-        @apply h-full flex items-center justify-center col-span-3 lg:col-span-1 bg-contain bg-left bg-no-repeat py-10 lg:py-0;
+    .photo-style {
+        @apply h-2/3 w-full flex justify-center relative bg-cover bg-center bg-no-repeat transform rounded shadow-md border-8 border-yellow-50 opacity-50;
     }
-    .album-grid-row {
-        @apply grid grid-rows-6 px-8 md:px-12 xl:pr-20;
+    .photo-bottom-style {
+        @apply h-1/5 w-full flex items-center justify-center absolute bottom-0 bg-yellow-50;
     }
-    .album-row-1 {
-        @apply row-span-1 flex items-center;
+    .tape-style {
+        @apply w-2/5 absolute -top-8;
     }
-    .album-row-4 {
-        @apply row-span-4 flex justify-center;
+    .photo-h1 {
+        @apply text-center text-2xl md:text-3xl;
     }
-    .album-grid-col {
-        @apply grid grid-cols-2 gap-5 lg:gap-0;
-    }
-    .album-col-2 {
-        @apply col-span-2 lg:col-span-1 flex items-center;
-    }
-    .album-title {
-        @apply mt-4 lg:mt-0 py-1 md:py-0 px-4 xl:px-8;
-    }
-    .album-icon {
-        @apply w-24 sm:w-28 mx-1 sm:mx-2 xl:mx-4;
-    }
-    /* artist.html */
-    .artists-style {
-        @apply min-h-screen w-screen grid grid-cols-2 gap-8 static lg:sticky top-0 py-0 lg:py-14 px-10 sm:px-8 md:px-12 xl:px-20;
-    }
-    .artist-style {
-        @apply h-screen lg:h-full w-full col-span-2 lg:col-span-1 shadow-2xl rounded-lg border-t-2 border-blue-300 p-4 sm:p-6;
-    }
-    .artist-grid-col-5 {
-        @apply h-full w-full grid grid-cols-5;
-    }
-    .artist-grid-col-9 {
-        @apply h-full w-full grid grid-cols-9;
-    }
-    .artist-col-1 {
-        @apply h-full col-span-1 flex items-center;
-    }
-    .artist-col-2 {
-        @apply h-full col-span-2 sm:col-span-1 flex items-center;
-    }
-    .artist-col-3 {
-        @apply h-full col-span-3 sm:col-span-4 flex items-center;
-    }
-    .artist-col-4 {
-        @apply h-full col-span-4 flex items-center;
-    }
-    .artist-col-7 {
-        @apply h-full col-span-7 sm:col-span-8 flex items-center;
-    }
-    .artist-col-8 {
-        @apply h-full w-full col-span-8 flex items-center mx-2 sm:mx-4 2xl:mx-8;
-    }
-    .artist-col-9 {
-        @apply h-full w-full grid grid-cols-9;
-    }
-    .artist-h-20 {
-        @apply h-1/5 flex items-center;
-    }
-    .artist-h-40 {
-        @apply h-2/5 flex items-center;
-    }
-    .artist-pl {
-        @apply pl-2 sm:pl-4 md:pl-6 lg:pl-4 2xl:pl-8;
-    }
-    .song-style {
-        @apply h-2/5 sm:h-1/5 lg:h-2/5 xl:h-1/5 flex items-center px-2;
-    }
-    .youtube {
-        @apply w-full h-full shadow rounded-lg;
-    }
-    .youtube-style {
-        @apply h-2/5 sm:h-3/5 lg:h-2/5 xl:h-3/5 flex items-center p-1 2xl:p-2 pt-12 sm:pt-2;
-    }
-    .comment-style {
-        @apply w-full h-auto bg-white text-blue-400 shadow rounded mx-2 sm:mx-4 2xl:mx-8 py-1 sm:py-2 px-3 sm:px-4 2xl:px-6;
-    }
-    .add-comment-style {
-        @apply w-full bg-white bg-opacity-80 hover:bg-opacity-100 focus:bg-opacity-100 focus:outline-none text-gray-400 shadow rounded p-2;
-    }
-    .add-comment-form {
-        @apply w-full mx-2 sm:mx-4 2xl:mx-8;
-    }
+    /* journal.html */
+    /* add_journal.html */
     /* user.html */
     .user-style {
         @apply h-5/6 w-4/5 xl:w-1/2 overflow-scroll;

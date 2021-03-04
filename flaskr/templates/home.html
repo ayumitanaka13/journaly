@@ -5,68 +5,70 @@
     {% block header %}
     {{ super() }}
     {% endblock %}
-
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 w-full h-full py-4">
-
-        <div class="w-full text-gray-800 text-center absolute top-1/2 left-0 z-10">
+    <div class="home-style">
+        <!-- title -->
+        <div class="title-style">
             <h1 class="title">Journaly</h1>
-            <h5 class="mt-10">Go on a journey, Write a journal.</h5>
+            <h5 class="font-semibold mt-8 xl:mt-16">Go on a journey, Write a journal.</h5>
         </div>
 
-        <!-- 1 -->
-        <div class="hidden sm:block">
-            <!-- {% for journal in journals %}
-            {% if loop.index == 1 %} -->
-            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
-                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
-                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
-                    <h1 class="text-4xl text-center">
-                            Sunset in Vancouver
-                    </h1>
+        <!-- background journals -->
+        {% for journal in journals %}        
+            <!-- 1 -->
+            {% if journal.id == 1 %}
+            <div class="flex sm:block items-center">
+                <div class="photo-style -rotate-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                    <img src="/static/image/tape.png" alt="" class="tape-style">
+                    <div class="photo-bottom-style">
+                        <h1 class="photo-h1">
+                            {{ journal.title}}
+                        </h1>
+                    </div>
                 </div>
             </div>
-            <!-- {% endif %}
-            {% endfor %} -->
-        </div>
-        <!-- 2 -->
-        <div class="hidden xl:flex items-end">
-            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
-                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
-                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
-                    <h1 class="text-4xl text-center">
-                        Sunset in Vancouver
-                    </h1>
+            {% endif %}
+            <!-- 2 -->
+            {% if journal.id == 2 %}
+            <div class="hidden xl:flex items-end">
+                <div class="photo-style rotate-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                    <img src="/static/image/tape.png" alt="" class="tape-style">
+                    <div class="photo-bottom-style">
+                        <h1 class="photo-h1">
+                            {{ journal.title}}
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- 3 -->
-        <div class="hidden xl:block">
-            <div class="flex justify-center w-full h-2/3 bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
-                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
-                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
-                    <h1 class="text-4xl text-center">
-                        Sunset in Vancouver
-                    </h1>
+            {% endif %}
+            <!-- 3 -->
+            {% if journal.id == 3 %}
+            <div class="hidden xl:block">
+                <div class="photo-style -rotate-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                    <img src="/static/image/tape.png" alt="" class="tape-style">
+                    <div class="photo-bottom-style">
+                        <h1 class="photo-h1">
+                            {{ journal.title}}
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- 4 -->
-        <div class="flex items-center sm:items-end">
-            <div class="flex justify-center w-full h-5/6 sm:h-2/3 bg-no-repeat bg-cover bg-center relative transform rotate-2 border-8 border-yellow-50 rounded shadow-md opacity-60" style="background-image:url(/static/image/vancouver_7.jpg)">
-                <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-8">
-                <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
-                    <h1 class="text-4xl text-center">
-                        Sunset in Vancouver
-                    </h1>
+            {% endif %}
+            <!-- 4 -->
+            {% if journal.id == 4 %}
+            <div class="hidden sm:flex items-end">
+                <div class="photo-style rotate-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                    <img src="/static/image/tape.png" alt="" class="tape-style">
+                    <div class="photo-bottom-style">
+                        <h1 class="photo-h1">
+                            {{ journal.title}}
+                        </h1>
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-        
+            {% endif %}
+        {% endfor %}
     </div>
-
 
 </div>
 
