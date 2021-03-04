@@ -184,7 +184,7 @@
         @apply w-full flex flex-wrap content-around justify-around my-3 lg:my-6 px-12;
     }
     .search-form {
-        @apply w-full mt-12 px-6 sm:px-8 md:px-16;
+        @apply w-full mt-8 px-6 sm:px-8 md:px-16;
     }
     .search-wrap {
         @apply flex flex-wrap md:flex-nowrap justify-center;
