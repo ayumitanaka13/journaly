@@ -35,7 +35,7 @@
                     <h1>
                         {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
                     </h1>
-                    <p class="font-light">{{ journal.comment }}</p>
+                    <p class="font-light sm:text-sm">{{ journal.comment }}</p>
         
                     <div class="w-full flex items-center justify-between mt-2 border">
                     {% for user in users %}
