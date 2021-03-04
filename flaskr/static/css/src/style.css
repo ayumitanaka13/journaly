@@ -139,10 +139,10 @@
         @apply w-full sm:w-1/4 lg:w-1/5 p-2 md:p-4 lg:p-0;
     }
     .user-form {
-        @apply w-full mt-8 px-4;
+        @apply w-full mt-8 px-0 sm:px-8;
     }
     .photo-h1-3 {
-        @apply text-center text-lg sm:text-xl;
+        @apply text-center text-base lg:text-lg;
     }
     /* search.html */
     .wrap-full-style {

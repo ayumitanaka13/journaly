@@ -1357,20 +1357,27 @@ ul {
 
 .user-form {
   margin-top: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0px;
+  padding-right: 0px;
   width: 100%;
 }
 
+@media (min-width: 640px){
+  .user-form{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .photo-h1-3 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   text-align: center;
 }
 
-@media (min-width: 640px){
+@media (min-width: 1024px){
   .photo-h1-3{
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
