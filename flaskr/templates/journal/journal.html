@@ -13,7 +13,7 @@
         <!-- journal -->
         <div class="border-2 w-full h-5/6 shadow-md bg-no-repeat bg-cover bg-center rounded" style="background-image: url(/static/image/paper6.png);" id="{{ journal.id }}">
             <!-- photo -->
-            <div class="border-2 w-full h-1/2 2xl:h-2/3 flex justify-center relative">
+            <div class="border-2 w-full h-1/2 xl:h-2/3 flex justify-center relative">
                 <div class="flex justify-center w-5/6 h-full bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
                     <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-4 sm:-top-10 2xl:-top-14">
                     <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
@@ -30,12 +30,12 @@
                 </div>
             </div>
             <!-- comment -->
-            <div class="flex items-center border-2 w-full h-1/2 2xl:h-1/3 p-2 px-4 rounded">
+            <div class="flex items-center border-2 w-full h-1/2 xl:h-1/3 p-2 px-4 rounded">
                 <div class="2xl:mt-4">
                     <h1>
                         {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
                     </h1>
-                    <p>{{ journal.comment }}</p>
+                    <p class="font-light">{{ journal.comment }}</p>
         
                     <div class="w-full flex items-center justify-between mt-2 border">
                     {% for user in users %}
