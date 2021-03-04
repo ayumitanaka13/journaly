@@ -15,37 +15,37 @@
         <div class="white-style">
 
             {% if current_user.is_authenticated %}
-            <form method="POST" enctype="multipart/form-data" class="form-style border">
+            <form method="POST" enctype="multipart/form-data" class="form-style font-josefin border">
                 {{form.csrf_token}}
                 {{ form.from_user_id(value=current_user.id) }}
-                <h6 class="w-full flex items-center justify-between border-2">
+                <p class="w-full flex items-center justify-between border-2">
                     <div>
                         {{render_field(form.start_date, placeholder="yyyy-mm-dd", class="input-form")}}
                     </div>
                     <div>
                         {{render_field(form.end_date, placeholder="yyyy-mm-dd", class="input-form")}}
                     </div>
-                </h6>
-                <h6 class="h-full w-full flex items-center justify-between mt-2 lg:mt-4 border-2">
+                </p>
+                <p class="h-full w-full flex items-center justify-between mt-2 lg:mt-4 border-2">
                     <div>
                         {{render_field(form.country, class="input-form")}}
                     </div>
                     <div>
                         {{render_field(form.city, class="input-form")}}
                     </div>
-                </h6>
-                <h6 class="mt-2 lg:mt-4">
+                </p>
+                <p class="mt-2 lg:mt-4">
                     {{render_field(form.title, class="input-form")}}
-                </h6>
-                <h6 class="mt-2 lg:mt-4">
+                </p>
+                <p class="mt-2 lg:mt-4">
                     {{render_field(form.comment, rows="3", class="input-form h-auto rounded-3xl")}}
-                </h6>
-                <h6 class="mt-2 lg:mt-4">
+                </p>
+                <p class="mt-2 lg:mt-4">
                     {{render_field(form.picture_path, class="input-form sm:h-auto")}}
-                </h6>
-                <h6 class="mt-4 lg:mt-8">
+                </p>
+                <p class="mt-4 lg:mt-8">
                     {{form.submit(class="h-10 btn-lightorange px-6")}}
-                </h6>
+                </p>
             </form>
             {% endif %}
         </div>
