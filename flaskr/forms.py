@@ -50,12 +50,12 @@ class JournalForm(FlaskForm):
     end_date = DateField('End', format='%Y/%m/%d', validators=[DataRequired()])
     country = SelectField(
         'Country',
-        choices=[u'Country', ('Brazil'), ('Canada'), ('Japan'), ('Singapore'), ('Spain')],
+        choices=[('Brazil'), ('Canada'), ('Japan'), ('Singapore'), ('Spain')],
         validators=[DataRequired()]
     )
     city = SelectField(
         'City',
-        choices=[u'City', ('Barcelona'), ('Kyoto'), ('Rio de Janeiro'), ('Singapore'), ('Vancouver')],
+        choices=[('Barcelona'), ('Kyoto'), ('Rio de Janeiro'), ('Singapore'), ('Vancouver')],
         validators=[DataRequired()]
     )
     title = StringField(
@@ -64,7 +64,7 @@ class JournalForm(FlaskForm):
     comment = TextAreaField(
         'Journal', validators=[DataRequired()]
     )
-    picture_path = FileField('', validators=[DataRequired()])
+    picture_path = FileField('Picture', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
