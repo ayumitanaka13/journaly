@@ -1272,7 +1272,13 @@ form {
   height: 100%;
   overflow: scroll;
   padding-top: 2.5rem;
-  width: 80%;
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .add-style{
+    width: 80%;
+  }
 }
 
 @media (min-width: 1024px){
@@ -1456,7 +1462,7 @@ form {
 /* search.html */
 
 .result-style {
-  height: 14rem;
+  height: 16rem;
   overflow: scroll;
   width: 100%;
 }
@@ -1532,7 +1538,13 @@ form {
 }
 
 .layout-2 {
-  width: 80%;
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .layout-2{
+    width: 80%;
+  }
 }
 
 @media (min-width: 1280px){
@@ -1548,7 +1560,13 @@ form {
 }
 
 .layout-3 {
-  width: 80%;
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .layout-3{
+    width: 80%;
+  }
 }
 
 @media (min-width: 1024px){

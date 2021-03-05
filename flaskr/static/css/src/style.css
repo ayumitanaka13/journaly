@@ -120,7 +120,7 @@
     }
     /* add_journal.html */
     .add-style {
-        @apply h-full lg:h-auto w-4/5 xl:w-3/5 2xl:w-1/2 overflow-scroll pt-10;
+        @apply h-full lg:h-auto w-full sm:w-4/5 xl:w-3/5 2xl:w-1/2 overflow-scroll pt-10;
     }
     .add-form-style {
         @apply w-5/6 lg:w-2/3 flex flex-wrap lg:flex-nowrap text-gray-700;
@@ -155,7 +155,7 @@
     }
     /* search.html */
     .result-style {
-        @apply h-56 sm:h-80 2xl:h-96 w-full overflow-scroll;
+        @apply h-64 sm:h-80 2xl:h-96 w-full overflow-scroll;
     }
     /* base components */
     /* layout */
@@ -169,10 +169,10 @@
         @apply flex w-full items-center justify-center bg-white bg-opacity-40 shadow-md rounded mt-8 xl:mt-10 py-8;
     }
     .layout-2 {
-        @apply w-4/5 xl:w-3/5 2xl:w-1/2;
+        @apply w-full sm:w-4/5 xl:w-3/5 2xl:w-1/2;
     }
     .layout-3 {
-        @apply w-4/5 lg:w-1/2 2xl:w-1/3;
+        @apply w-full sm:w-4/5 lg:w-1/2 2xl:w-1/3;
     }
     /* font */
     .title {
