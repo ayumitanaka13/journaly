@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="label-style">
-                    <img src="/static/image/label3.png" alt="" class="w-full shadow-md">
+                    <img src="/static/image/label3.png" alt="" class="w-full shadow">
                     <h1 class="label-h1">
                         {{ journal.city }}, {{ journal.country }}
                     </h1>
@@ -33,7 +33,7 @@
             <div class="page-bottom-style">
                 <div class="2xl:mt-4">
                     <h1>
-                        {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
+                        {{ journal.start_date.strftime('%b. %d, %Y') }} - {{ journal.end_date.strftime('%b. %d, %Y') }}
                     </h1>
                     <p class="font-light text-gray-600 sm:text-sm">{{ journal.comment }}</p>
                     <!-- journal info -->
@@ -58,7 +58,7 @@
 
                     {% if current_user.is_authenticated %}
                         <!-- like button -->
-                        <form method="POST" class="font-josefin">
+                        <form method="POST">
                             {{ form.csrf_token }}
                             {{ form.from_user_id(value=current_user.id) }}
                             {{ form.to_journal_id(value=journal.id) }}

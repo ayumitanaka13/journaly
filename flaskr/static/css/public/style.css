@@ -864,7 +864,7 @@ ul {
 
 .btn-toggle:hover{
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 116, 0, var(--tw-bg-opacity));
+  background-color: rgba(255, 154, 0, var(--tw-bg-opacity));
 }
 
 .btn-toggle{
@@ -874,7 +874,7 @@ ul {
 
 .btn-toggle:hover{
   --tw-border-opacity: 1;
-  border-color: rgba(255, 116, 0, var(--tw-border-opacity));
+  border-color: rgba(255, 154, 0, var(--tw-border-opacity));
 }
 
 .btn-toggle{
@@ -1082,13 +1082,6 @@ ul {
   width: 100%;
 }
 
-@media (min-width: 640px){
-  .page-bottom-style{
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
 @media (min-width: 1280px){
   .page-bottom-style{
     height: 33.333333%;
@@ -1174,8 +1167,14 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   width: 100%;
+}
+
+@media (min-width: 640px){
+  .info-style{
+    margin-top: 0.5rem;
+  }
 }
 
 .icon-size-2 {
@@ -1610,6 +1609,7 @@ ul {
 .btn-lightorange{
   border-radius: 9999px;
   cursor: pointer;
+  font-family: Josefin Sans, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -1660,6 +1660,7 @@ ul {
 .btn-lightorange-sm{
   border-radius: 9999px;
   cursor: pointer;
+  font-family: Josefin Sans, sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
 }
@@ -1719,6 +1720,7 @@ ul {
   border-radius: 9999px;
   border-width: 1px;
   cursor: pointer;
+  font-family: Josefin Sans, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -1789,6 +1791,7 @@ ul {
   border-radius: 9999px;
   border-width: 1px;
   cursor: pointer;
+  font-family: Josefin Sans, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
