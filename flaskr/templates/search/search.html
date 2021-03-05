@@ -34,7 +34,7 @@
                         <div class="photo-style-3" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
                             <img src="/static/image/tape.png" alt="tape" class="tape-style -top-6">
                             <div class="photo-bottom-style">
-                                <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
+                                <a href="{{ url_for('journal.journal', _anchor=journal.id) }}" class="duration-300 hover:text-orange">
                                 <h1 class="photo-h1-3">
                                     {{ journal.title }}
                                 </h1>

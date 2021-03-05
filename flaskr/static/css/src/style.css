@@ -57,7 +57,7 @@
         @apply ml-6 md:ml-8 lg:ml-12;
     }
     .menu-block {
-        @apply inline-block hover:opacity-75 duration-300;
+        @apply inline-block hover:text-orange duration-300;
     }
     .btn-toggle {
         @apply flex items-center bg-transparent hover:bg-lightorange focus:outline-none border border-gray-700 hover:border-lightorange hover:text-white rounded duration-300 py-2 px-3;

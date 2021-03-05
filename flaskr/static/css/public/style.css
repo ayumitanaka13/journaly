@@ -582,7 +582,8 @@ form {
 }
 
 .menu-block:hover{
-  opacity: 0.75;
+  --tw-text-opacity: 1;
+  color: rgba(255, 116, 0, var(--tw-text-opacity));
 }
 
 .menu-block{
