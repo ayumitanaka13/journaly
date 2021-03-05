@@ -1481,7 +1481,7 @@ form {
 
 @media (min-width: 1536px){
   .result-style{
-    height: 24rem;
+    height: 100%;
   }
 }
 

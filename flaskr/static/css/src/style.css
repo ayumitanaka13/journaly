@@ -155,7 +155,7 @@
     }
     /* search.html */
     .result-style {
-        @apply h-64 sm:h-80 2xl:h-96 w-full overflow-scroll;
+        @apply h-64 sm:h-80 2xl:h-full w-full overflow-scroll;
     }
     /* base components */
     /* layout */
