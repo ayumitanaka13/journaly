@@ -7,56 +7,57 @@
 {{ super() }}
 {% endblock %}
 
-    <div class="bg-style border">
+    <div class="bg-style">
+        <div class="layout-2 h-full lg:h-auto overflow-scroll pt-10">
 
-    <div class="user-style py-6 border">
-        <h1 class="subtitle">Write Journal</h1>
-        <div class="white-style">
 
-            {% if current_user.is_authenticated %}
-            <form method="POST" enctype="multipart/form-data" class="form-style font-josefin flex flex-wrap lg:flex-nowrap border-4">
-                {{form.csrf_token}}
-                {{ form.from_user_id(value=current_user.id) }}
-                <!-- <div class="w-1/2 mr-2"> -->
-                <div class="w-full lg:w-1/3 flex flex-wrap content-between lg:mr-2">
-                    <div class="w-full">
-                        <p>
-                            {{render_field(form.start_date, placeholder="yyyy-mm-dd", class="input-form")}}
-                        </p>
-                        <p class="mt-2 lg:mt-4">
-                            {{render_field(form.end_date, placeholder="yyyy-mm-dd", class="input-form")}}
-                        </p>
+            <h1 class="subtitle">Write Journal</h1>
+
+
+            <div class="white-style">
+                {% if current_user.is_authenticated %}
+                <form method="POST" enctype="multipart/form-data" class="w-5/6 lg:w-2/3 text-gray-700 font-josefin flex flex-wrap lg:flex-nowrap">
+                    {{form.csrf_token}}
+                    {{ form.from_user_id(value=current_user.id) }}
+                    <div class="w-full lg:w-1/3 flex flex-wrap content-between lg:pr-2">
+                        <div class="w-full">
+                            <p>
+                                {{render_field(form.start_date, placeholder="yyyy-mm-dd", class="input-form")}}
+                            </p>
+                            <p class="mt-2 lg:mt-4">
+                                {{render_field(form.end_date, placeholder="yyyy-mm-dd", class="input-form")}}
+                            </p>
+                        </div>
+                        <div class="w-full">
+                            <p class="mt-2 lg:mt-0">
+                                {{render_field(form.country, class="input-form")}}
+                            </p>
+                            <p class="mt-2 lg:mt-4">
+                                {{render_field(form.city, class="input-form")}}
+                            </p>
+                        </div>
                     </div>
-                    <div class="w-full">
+                    <div class="w-full lg:w-2/3 lg:pl-2">
                         <p class="mt-2 lg:mt-0">
-                            {{render_field(form.country, class="input-form")}}
+                            {{render_field(form.title, class="input-form")}}
+                        </p>
+                        <p class="mt-2 lgmt-4">
+                            {{render_field(form.comment, rows="3", class="input-form h-auto rounded-3xl")}}
                         </p>
                         <p class="mt-2 lg:mt-4">
-                            {{render_field(form.city, class="input-form")}}
+                            {{render_field(form.picture_path, class="input-form sm:h-auto text-xs")}}
+                        </p>
+                        <p class="mt-4 lg:mt-8 text-right">
+                            {{form.submit(class="btn-lightorange h-10 px-6")}}
                         </p>
                     </div>
-                </div>
-                <div class="w-full lg:w-2/3 lg:ml-2">
-                    <p class="mt-2 lg:mt-0">
-                        {{render_field(form.title, class="input-form")}}
-                    </p>
-                    <p class="mt-2 lg:mt-4">
-                        {{render_field(form.comment, rows="3", class="input-form h-auto rounded-3xl")}}
-                    </p>
-                    <p class="mt-2 lg:mt-4">
-                        {{render_field(form.picture_path, class="input-form sm:h-auto text-xs")}}
-                    </p>
-                    <p class="mt-4 lg:mt-8 text-right">
-                        {{form.submit(class="btn-lightorange h-10 px-6")}}
-                    </p>
-                </div>
-            </form>
-            {% endif %}
+                </form>
+                {% endif %}
+            </div>
+
+
+        
         </div>
-    
     </div>
-
-    </div>
-
 </div>
 {% endblock %}

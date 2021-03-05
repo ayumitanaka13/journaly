@@ -1223,6 +1223,26 @@ ul {
 
 /* add_journal.html */
 
+.add_journal-style {
+  overflow: scroll;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80%;
+}
+
+@media (min-width: 1024px){
+  .add_journal-style{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .add_journal-style{
+    width: 50%;
+  }
+}
+
 /* user.html */
 
 .user-style {

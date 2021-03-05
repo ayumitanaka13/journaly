@@ -113,6 +113,9 @@
         @apply absolute text-center text-xs sm:text-lg xl:text-xl 2xl:text-2xl;
     }
     /* add_journal.html */
+    .add_journal-style {
+        @apply w-4/5 xl:w-1/2 overflow-scroll py-4 lg:py-10;
+    }
     /* user.html */
     .user-style {
         @apply h-5/6 w-4/5 xl:w-1/2 overflow-scroll py-4;
