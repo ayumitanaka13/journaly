@@ -135,9 +135,7 @@
     .photo-h1-3 {
         @apply text-center text-base lg:text-lg;
     }
-    
     /* search.html */
-
     /* base components */
     .base-style {
         @apply h-screen w-screen px-8 md:px-12 xl:px-20 pb-24 md:pb-32 xl:pb-36;
