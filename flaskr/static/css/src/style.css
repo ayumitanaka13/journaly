@@ -113,8 +113,17 @@
         @apply absolute text-center text-xs sm:text-lg xl:text-xl 2xl:text-2xl;
     }
     /* add_journal.html */
-    .add_journal-style {
-        @apply w-4/5 xl:w-1/2 overflow-scroll py-4 lg:py-10;
+    .add-style {
+        @apply h-full lg:h-auto w-4/5 xl:w-3/5 2xl:w-1/2 overflow-scroll pt-10;
+    }
+    .add-form-style {
+        @apply w-5/6 lg:w-2/3 flex flex-wrap lg:flex-nowrap text-gray-700 font-josefin;
+    }
+    .add-form-left-style {
+        @apply w-full lg:w-1/3 flex flex-wrap content-between lg:pr-2;
+    }
+    .add-form-right-style {
+        @apply w-full lg:w-2/3 lg:pl-2;
     }
     /* user.html */
     .user-style {

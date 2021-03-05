@@ -8,18 +8,15 @@
 {% endblock %}
 
     <div class="bg-style">
-        <div class="layout-2 h-full lg:h-auto overflow-scroll pt-10">
-
-
+        <div class="add-style">
             <h1 class="subtitle">Write Journal</h1>
-
-
+            <!-- add journal form -->
             <div class="white-style">
                 {% if current_user.is_authenticated %}
-                <form method="POST" enctype="multipart/form-data" class="w-5/6 lg:w-2/3 text-gray-700 font-josefin flex flex-wrap lg:flex-nowrap">
+                <form method="POST" enctype="multipart/form-data" class="add-form-style">
                     {{form.csrf_token}}
                     {{ form.from_user_id(value=current_user.id) }}
-                    <div class="w-full lg:w-1/3 flex flex-wrap content-between lg:pr-2">
+                    <div class="add-form-left-style">
                         <div class="w-full">
                             <p>
                                 {{render_field(form.start_date, placeholder="yyyy-mm-dd", class="input-form")}}
@@ -37,7 +34,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="w-full lg:w-2/3 lg:pl-2">
+                    <div class="add-form-right-style">
                         <p class="mt-2 lg:mt-0">
                             {{render_field(form.title, class="input-form")}}
                         </p>
@@ -54,9 +51,6 @@
                 </form>
                 {% endif %}
             </div>
-
-
-        
         </div>
     </div>
 </div>

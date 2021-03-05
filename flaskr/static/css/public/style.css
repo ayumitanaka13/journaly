@@ -1223,23 +1223,69 @@ ul {
 
 /* add_journal.html */
 
-.add_journal-style {
+.add-style {
+  height: 100%;
   overflow: scroll;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 2.5rem;
   width: 80%;
 }
 
 @media (min-width: 1024px){
-  .add_journal-style{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+  .add-style{
+    height: auto;
   }
 }
 
 @media (min-width: 1280px){
-  .add_journal-style{
+  .add-style{
+    width: 60%;
+  }
+}
+
+@media (min-width: 1536px){
+  .add-style{
     width: 50%;
+  }
+}
+
+.add-form-style {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Josefin Sans, sans-serif;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+  width: 83.333333%;
+}
+
+@media (min-width: 1024px){
+  .add-form-style{
+    flex-wrap: nowrap;
+    width: 66.666667%;
+  }
+}
+
+.add-form-left-style {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 1024px){
+  .add-form-left-style{
+    padding-right: 0.5rem;
+    width: 33.333333%;
+  }
+}
+
+.add-form-right-style {
+  width: 100%;
+}
+
+@media (min-width: 1024px){
+  .add-form-right-style{
+    padding-left: 0.5rem;
+    width: 66.666667%;
   }
 }
 
