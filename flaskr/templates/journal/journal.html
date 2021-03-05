@@ -9,7 +9,7 @@
 
 <div class="journal-style">
     {% for journal in journals %}
-    <div class="h-screen flex flex-wrap items-center border">
+    <div class="pages-style">
         <!-- journal -->
         <div class="page-style" style="background-image: url(/static/image/paper6.png);" id="{{ journal.id }}">
             <!-- photo -->
@@ -36,7 +36,6 @@
                         {{ journal.start_date.strftime('%Y. %m. %d') }} - {{ journal.end_date.strftime('%Y. %m. %d') }}
                     </h1>
                     <p class="font-light text-gray-600 sm:text-sm">{{ journal.comment }}</p>
-
                     <!-- journal info -->
                     <div class="info-style">
                     {% for user in users %}
@@ -50,7 +49,7 @@
                                 <img src="/static/image/logo2.png" class="icon-style">
                                 {% endif %}
                             </div>
-                            <h6 class="ml-2">
+                            <h6 class="font-aurore ml-2">
                                 {{ user.username }}
                             </h6>
                         </div>

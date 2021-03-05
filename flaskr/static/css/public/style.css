@@ -912,6 +912,7 @@ ul {
   height: 100%;
   padding-top: 0px;
   padding-bottom: 0px;
+  position: relative;
   width: 100%;
   gap: 0px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1006,8 +1007,14 @@ ul {
   display: grid;
   min-height: 100vh;
   width: 100%;
-  gap: 0px;
+  gap: 1rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px){
+  .journal-style{
+    gap: 0px;
+  }
 }
 
 @media (min-width: 1024px){
@@ -1017,17 +1024,37 @@ ul {
   }
 }
 
+.pages-style {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px){
+  .pages-style{
+    margin-bottom: 0px;
+  }
+}
+
 .page-style {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.25rem;
-  height: 83.333333%;
+  height: 100%;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   width: 100%;
+}
+
+@media (min-width: 640px){
+  .page-style{
+    height: 83.333333%;
+  }
 }
 
 .page-top-style {
@@ -1050,9 +1077,16 @@ ul {
   height: 50%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   width: 100%;
+}
+
+@media (min-width: 640px){
+  .page-bottom-style{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media (min-width: 1280px){
@@ -1167,7 +1201,7 @@ ul {
 }
 
 .photo-h1-2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   text-align: center;
 }
