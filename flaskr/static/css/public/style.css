@@ -1690,8 +1690,6 @@ form {
 /* form */
 
 .form-style {
-  --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
   width: 75%;
 }
 
@@ -1717,6 +1715,7 @@ form {
 
 .input-form{
   border-radius: 9999px;
+  font-family: Josefin Sans, sans-serif;
   height: 2.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
