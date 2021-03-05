@@ -11,7 +11,6 @@ module.exports = {
         beige: '#edcca0',
         orange: '#ff7400',
         lightorange: '#ff9a00',
-        darkorange: '#e56800',
       },
       fontFamily: {
         aurore: ['La Belle Aurore', 'cursive'],
