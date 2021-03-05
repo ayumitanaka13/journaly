@@ -1,4 +1,4 @@
-from flask import Blueprint, request, render_template, flash
+from flask import Blueprint, request, render_template, flash, redirect, url_for
 from flask_login import login_required, current_user
 from flaskr.forms import CommentForm, LikeJournalForm
 from flaskr.models import Journal, User, Comment, LikeJournal
@@ -32,11 +32,12 @@ def journal():
                 for liked_item in liked_items:
                     liked_item.delete_like()
         db.session.commit()
+        return redirect(url_for('user.user'))
 
-    if request.method == 'POST' and form_c.validate():
-        new_comment = Comment(user_id, form_c.to_journal_id.data, form_c.comment.data)
-        with db.session.begin(subtransactions=True):
-            new_comment.create_comment()
-        db.session.commit()
-        flash("Your comment has been added!", "success")
+    # if request.method == 'POST' and form_c.validate():
+    #     new_comment = Comment(user_id, form_c.to_journal_id.data, form_c.comment.data)
+    #     with db.session.begin(subtransactions=True):
+    #         new_comment.create_comment()
+    #     db.session.commit()
+    #     flash("Your comment has been added!", "success")
     return render_template('journal/journal.html',  users=users, journals=journals, comments=comments, like_journals=like_journals, form=form, form_c=form_c)
