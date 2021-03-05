@@ -32,7 +32,7 @@
                     {% for journal in journals %}
                         {% if form.keyword.data.lower() in journal.country.lower() or form.keyword.data.lower() in journal.city.lower() %}
                         <div class="photo-style-3" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
-                            <img src="/static/image/tape.png" alt="" class="tape-style -top-6">
+                            <img src="/static/image/tape.png" alt="tape" class="tape-style -top-6">
                             <div class="photo-bottom-style">
                                 <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
                                 <h1 class="photo-h1-3">

@@ -41,10 +41,11 @@
                         Your Journals
                     </h6>    
                     <div class="wrap-style">
+                    {% set isWrote = {'isWrote':False} %}
                         {% for journal in journals %}
                         {% if current_user.id == journal.from_user_id %}
                         <div class="photo-style-3" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
-                            <img src="/static/image/tape.png" alt="" class="tape-style -top-6">
+                            <img src="/static/image/tape.png" alt="tape" class="tape-style -top-6">
                             <div class="photo-bottom-style">
                                 <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
                                 <h1 class="photo-h1-3">
@@ -53,8 +54,16 @@
                                 </a>
                             </div>
                         </div>
+                    {% if isWrote.update({'isWrote':True}) %}{% endif %}
                         {% endif %}
                         {% endfor %}
+                    {% if not isWrote.isWrote %}  
+                        <h6 class="mt-2">
+                            <small>
+                                Write your first journal!
+                            </small>
+                        </h6>
+                    {% endif %}
                     </div>
                     <!-- your favs -->
                     <h6 class="mt-8 lg:mt-16">
@@ -66,7 +75,7 @@
                         {% for journal in journals %}
                         {% if like_journal.from_user_id == current_user.id and like_journal.to_journal_id == journal.id %}
                         <div class="photo-style-3" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
-                            <img src="/static/image/tape.png" alt="" class="tape-style -top-6">
+                            <img src="/static/image/tape.png" alt="tape" class="tape-style -top-6">
                             <div class="photo-bottom-style">
                                 <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
                                 <h1 class="photo-h1-3">

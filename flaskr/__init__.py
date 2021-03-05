@@ -16,7 +16,7 @@ def create_app():
     app = Flask(__name__)
     SECRET_KEY = os.urandom(32)
     app.config['SECRET_KEY'] = 'SECRET_KEY'
-    app.config['SQLALCHEMY_DATABASE_URL'] = \
+    app.config['SQLALCHEMY_DATABASE_URI'] = \
         'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     # app.config['SQLALCHEMY_DATABASE_URL'] = os.environ.get('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
