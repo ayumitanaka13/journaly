@@ -16,5 +16,6 @@ Also users can browse other's journals.
 ## Technologies Used
 
 - Python Flask
-- SQL Alchemy
 - Tailwind CSS
+- SQL Alchemy
+- SQ Lite
