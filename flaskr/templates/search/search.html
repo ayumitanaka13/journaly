@@ -15,10 +15,10 @@
                 {{form.csrf_token}}
                 <div class="flex">
                     <h6 class="w-full pr-2">
-                        {{render_field(form.keyword, class="input-form h-10", placeholder="Let's search with the name of location!")}}
+                        {{render_field(form.keyword, class="input-form", placeholder="Let's search with the name of location!")}}
                     </h6>
-                    <h6 class="mt-0">
-                        {{form.submit(class="btn-lightorange h-10")}}
+                    <h6>
+                        {{form.submit(class="btn-lightorange")}}
                     </h6>
                 </div>
             </form>

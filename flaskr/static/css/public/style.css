@@ -753,6 +753,10 @@ ul {
   }
 }
 
+form {
+  font-family: Josefin Sans, sans-serif;
+}
+
 .container{
   width: 100%;
 }
@@ -1292,7 +1296,6 @@ ul {
 .add-form-style {
   display: flex;
   flex-wrap: wrap;
-  font-family: Josefin Sans, sans-serif;
   --tw-text-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-text-opacity));
   width: 83.333333%;
@@ -1617,7 +1620,7 @@ ul {
 .btn-lightorange{
   border-radius: 9999px;
   cursor: pointer;
-  font-family: Josefin Sans, sans-serif;
+  height: 2.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -1668,7 +1671,6 @@ ul {
 .btn-lightorange-sm{
   border-radius: 9999px;
   cursor: pointer;
-  font-family: Josefin Sans, sans-serif;
   font-size: 0.75rem;
   line-height: 1rem;
 }
@@ -1728,7 +1730,6 @@ ul {
   border-radius: 9999px;
   border-width: 1px;
   cursor: pointer;
-  font-family: Josefin Sans, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -1739,10 +1740,10 @@ ul {
 }
 
 .btn-orange{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -1769,10 +1770,6 @@ ul {
 @media (min-width: 640px){
   .btn-orange{
     border-width: 2px;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 }
 
@@ -1799,7 +1796,6 @@ ul {
   border-radius: 9999px;
   border-width: 1px;
   cursor: pointer;
-  font-family: Josefin Sans, sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -1810,10 +1806,10 @@ ul {
 }
 
 .btn-transparent{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .btn-transparent:hover{
@@ -1843,10 +1839,6 @@ ul {
 @media (min-width: 640px){
   .btn-transparent{
     border-width: 2px;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
   }
 }
 

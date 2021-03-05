@@ -37,6 +37,9 @@
     ul {
         @apply font-josefin lg:flex text-lg md:text-xl lg:text-lg;
     }
+    form {
+        @apply font-josefin;
+    }
 }
 
 @layer components {
@@ -120,7 +123,7 @@
         @apply h-full lg:h-auto w-4/5 xl:w-3/5 2xl:w-1/2 overflow-scroll pt-10;
     }
     .add-form-style {
-        @apply w-5/6 lg:w-2/3 flex flex-wrap lg:flex-nowrap text-gray-700 font-josefin;
+        @apply w-5/6 lg:w-2/3 flex flex-wrap lg:flex-nowrap text-gray-700;
     }
     .add-form-left-style {
         @apply w-full lg:w-1/3 flex flex-wrap content-between lg:pr-2;
@@ -180,16 +183,16 @@
     }
     /* button */
     .btn-lightorange {
-        @apply font-josefin bg-lightorange hover:bg-orange text-white focus:outline-none rounded-full shadow cursor-pointer duration-300 text-sm sm:text-base py-1 sm:py-2 px-4 xl:px-6;
+        @apply h-10 bg-lightorange hover:bg-orange text-white focus:outline-none rounded-full shadow cursor-pointer duration-300 text-sm sm:text-base py-1 sm:py-2 px-4 xl:px-6;
     }
     .btn-lightorange-sm {
-        @apply font-josefin bg-lightorange hover:bg-orange text-white focus:outline-none rounded-full shadow cursor-pointer duration-300 text-xs sm:text-sm py-1 sm:py-2 px-3 md:px-4;
+        @apply bg-lightorange hover:bg-orange text-white focus:outline-none rounded-full shadow cursor-pointer duration-300 text-xs sm:text-sm py-1 sm:py-2 px-3 md:px-4;
     }
     .btn-orange {
-        @apply font-josefin bg-lightorange hover:bg-transparent text-white hover:text-lightorange focus:outline-none border sm:border-2 border-transparent hover:border-lightorange rounded-full shadow hover:shadow-none cursor-pointer duration-300 text-sm py-2 sm:py-1 px-4 sm:px-3;
+        @apply bg-lightorange hover:bg-transparent text-white hover:text-lightorange focus:outline-none border sm:border-2 border-transparent hover:border-lightorange rounded-full shadow hover:shadow-none cursor-pointer duration-300 text-sm py-1 px-3;
     }
     .btn-transparent {
-        @apply font-josefin bg-transparent hover:bg-lightorange text-lightorange hover:text-white focus:outline-none border sm:border-2 border-lightorange hover:border-lightorange rounded-full hover:shadow focus:shadow-inner cursor-pointer duration-300 text-sm py-2 sm:py-1 px-4 sm:px-3;
+        @apply bg-transparent hover:bg-lightorange text-lightorange hover:text-white focus:outline-none border sm:border-2 border-lightorange hover:border-lightorange rounded-full hover:shadow focus:shadow-inner cursor-pointer duration-300 text-sm py-1 px-3;
     }
     .btn-back {
         @apply h-6 md:h-7 lg:h-8 xl:h-12 w-6 md:w-7 lg:w-8 xl:w-12 flex items-center justify-center bg-transparent hover:bg-white border lg:border-2 border-white shadow-none hover:shadow rounded-full duration-300 hover:text-orange;
