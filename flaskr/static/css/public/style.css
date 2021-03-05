@@ -787,28 +787,6 @@ ul {
   }
 }
 
-.photo {
-  --tw-border-opacity: 1;
-  border-color: rgba(255, 251, 235, var(--tw-border-opacity));
-  border-radius: 0.25rem;
-  border-width: 8px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  width: 100%;
-}
-
-.frame {
-  --tw-border-opacity: 1;
-  border-color: rgba(255, 251, 235, var(--tw-border-opacity));
-  border-radius: 0.25rem;
-  border-width: 8px;
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 /* base.html */
 
 .nav-bar-style {
@@ -1321,40 +1299,6 @@ ul {
   }
 }
 
-.icon-size {
-  width: 33.333333%;
-}
-
-@media (min-width: 640px){
-  .icon-size{
-    width: 16.666667%;
-  }
-}
-
-.img-size {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-@media (min-width: 640px){
-  .img-size{
-    width: 25%;
-  }
-}
-
-@media (min-width: 768px){
-  .img-size{
-    padding: 1rem;
-  }
-}
-
-@media (min-width: 1024px){
-  .img-size{
-    padding: 0px;
-    width: 20%;
-  }
-}
-
 .user-form {
   margin-top: 2rem;
   padding-left: 0px;
@@ -1366,6 +1310,16 @@ ul {
   .user-form{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+.icon-size {
+  width: 33.333333%;
+}
+
+@media (min-width: 640px){
+  .icon-size{
+    width: 16.666667%;
   }
 }
 
@@ -1384,24 +1338,9 @@ ul {
 
 /* search.html */
 
-.wrap-full-style {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-around;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  width: 100%;
-}
-
-@media (min-width: 1024px){
-  .wrap-full-style{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-}
+/* .wrap-full-style {
+        @apply w-full flex flex-wrap content-around justify-center my-3 lg:my-6 px-12;
+    } */
 
 .search-form {
   margin-top: 2rem;

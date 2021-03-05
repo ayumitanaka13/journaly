@@ -29,10 +29,10 @@
                         {{form.csrf_token}}
                         <div class="flex">
                             <h6 class="w-full pr-2">
-                                {{render_field(form.picture_path, class="h-full input-form", placeholder="Upload your icon")}}
+                                {{render_field(form.picture_path, class="input-form h-full", placeholder="Upload your icon")}}
                             </h6>
                             <h6>
-                                {{form.submit(class="h-full btn-lightorange")}}
+                                {{form.submit(class="btn-lightorange h-full")}}
                             </h6>
                         </div>
                     </form>
@@ -65,7 +65,7 @@
                     {% for like_journal in like_journals %}
                         {% for journal in journals %}
                         {% if like_journal.from_user_id == current_user.id and like_journal.to_journal_id == journal.id %}
-                        <div class="photo-style-3 rotate-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                        <div class="photo-style-3" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
                             <img src="/static/image/tape.png" alt="" class="tape-style -top-6">
                             <div class="photo-bottom-style">
                                 <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
@@ -80,9 +80,11 @@
                         {% endfor %}
                     {% endfor %}
                     {% if not isLiked.isLiked %}  
-                        <p class="mt-2">
-                            Save your favs here!
-                        </p>
+                        <h6 class="mt-2">
+                            <small>
+                                Save your favs here!
+                            </small>
+                        </h6>
                     {% endif %}
                     </div>
                 </div>

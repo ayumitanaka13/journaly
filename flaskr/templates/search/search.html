@@ -7,7 +7,7 @@
     {{ super() }}
     {% endblock %}
 
-    <div class="bg-style border">
+    <div class="bg-style">
        
     <div class="layout-2">
             <h1 class="subtitle">Search</h1>
@@ -15,10 +15,10 @@
                 {{form.csrf_token}}
                 <div class="search-wrap">
                     <h6 class="search-bar">
-                        {{render_field(form.keyword, class="input-form mt-0 py-2", placeholder="Let's search with location name!")}}
+                        {{render_field(form.keyword, class="input-form h-10", placeholder="Let's search with location name!")}}
                     </h6>
                     <h6 class="mt-4 md:mt-0">
-                        {{form.submit(class="h-10 btn-lightorange py-2")}}
+                        {{form.submit(class="btn-lightorange h-10")}}
                     </h6>
                 </div>
             </form>
@@ -27,27 +27,23 @@
             {% else %}
             <div class="white-style">
                 <div class="w-full h-48 sm:h-96 overflow-scroll">
-                    <div class="wrap-full-style h-full">
+                    <div class="wrap-style">
                     {% set isMatched = {'isMatched':False} %}
-
                     {% for journal in journals %}
                         {% if form.keyword.data.lower() in journal.country.lower() or form.keyword.data.lower() in journal.city.lower() %}
-                        
-                        <div class="flex justify-center w-full sm:w-1/3 h-full bg-no-repeat bg-cover bg-center relative transform -rotate-2 border-8 border-yellow-50 rounded shadow-md m-2" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
-                            <img src="/static/image/tape.png" alt="" class="w-2/5 absolute -top-6">
-                            <div class="w-full h-1/5 flex items-center justify-center absolute bottom-0 bg-yellow-50">
+                        <div class="photo-style-3" style="background-image:url({{url_for('static', filename=journal.picture_path)}})">
+                            <img src="/static/image/tape.png" alt="" class="tape-style -top-6">
+                            <div class="photo-bottom-style">
                                 <a href="{{ url_for('journal.journal', _anchor=journal.id) }}">
-                                <h1 class="text-xl text-center">
+                                <h1 class="photo-h1-3">
                                     {{ journal.title }}
                                 </h1>
                                 </a>
                             </div>
                         </div>
-
                         {% if isMatched.update({'isMatched':True}) %}{% endif %}
                         {% endif %}
                     {% endfor %}
-
                     {% if not isMatched.isMatched %}
                         <h6 class="text-center">We couldn't find a match for "{{ form.keyword.data }}".</h6>
                     {% endif %}
