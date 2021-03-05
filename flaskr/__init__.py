@@ -6,7 +6,6 @@ from flask_login import LoginManager
 
 login_manager = LoginManager()
 login_manager.login_view = 'login.login'
-
 login_manager.login_message = 'Please login'
 
 basedir = os.path.abspath(os.path.dirname(__name__))
@@ -17,9 +16,9 @@ def create_app():
     app = Flask(__name__)
     SECRET_KEY = os.urandom(32)
     app.config['SECRET_KEY'] = 'SECRET_KEY'
-    app.config['SQLALCHEMY_DATABASE_URI'] = \
+    app.config['SQLALCHEMY_DATABASE_URL'] = \
         'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
+    # app.config['SQLALCHEMY_DATABASE_URL'] = os.environ.get('DATABASE_URL')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     from flaskr.login.views import login_bp
     from flaskr.logout.views import logout_bp
