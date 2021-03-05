@@ -6,6 +6,7 @@
 {% block header %}
 {{ super() }}
 {% endblock %}
+
     <div class="bg-style h-screen md:h-full border">
 
     <div class="layout-2 border">
@@ -43,10 +44,10 @@
                         {{render_field(form.comment, rows="3", class="input-form h-auto rounded-3xl")}}
                     </p>
                     <p class="mt-2 lg:mt-4">
-                        {{render_field(form.picture_path, class="input-form sm:h-auto")}}
+                        {{render_field(form.picture_path, class="input-form sm:h-auto text-xs")}}
                     </p>
                     <p class="mt-4 lg:mt-8 text-right">
-                        {{form.submit(class="h-10 btn-lightorange py-0 sm:py-0 px-6")}}
+                        {{form.submit(class="btn-lightorange h-10 px-6")}}
                     </p>
                 </div>
             </form>

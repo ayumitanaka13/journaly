@@ -1345,6 +1345,24 @@ ul {
 
 /* search.html */
 
+.result-style {
+  height: 14rem;
+  overflow: scroll;
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .result-style{
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1536px){
+  .result-style{
+    height: 24rem;
+  }
+}
+
 /* base components */
 
 .base-style {
@@ -1416,30 +1434,6 @@ ul {
   .subtitle{
     font-size: 4.5rem;
     line-height: 1;
-  }
-}
-
-.sub-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-@media (min-width: 640px){
-  .sub-subtitle{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-.small {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-@media (min-width: 640px){
-  .small{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -1845,7 +1839,7 @@ ul {
 .input-form {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.7;
+  --tw-bg-opacity: 0.6;
 }
 
 .input-form:hover{
@@ -1876,7 +1870,7 @@ ul {
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-text-opacity: 1;
-  color: rgba(156, 163, 175, var(--tw-text-opacity));
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
   width: 100%;
   transition-duration: 300ms;
 }

@@ -8,9 +8,9 @@
     {% endblock %}
 
     <div class="bg-style">
-       
-    <div class="layout-2">
+        <div class="layout-2">
             <h1 class="subtitle">Search</h1>
+            <!-- search bar -->
             <form method="POST" class="user-form">
                 {{form.csrf_token}}
                 <div class="flex">
@@ -22,11 +22,11 @@
                     </h6>
                 </div>
             </form>
-                    
+            <!-- search result -->
             {% if not form.keyword.data %}
             {% else %}
             <div class="white-style">
-                <div class="w-full h-52 sm:h-80 xl:h-96 overflow-scroll">
+                <div class="result-style">
                     <div class="wrap-style">
                     {% set isMatched = {'isMatched':False} %}
                     {% for journal in journals %}
@@ -52,8 +52,6 @@
             </div>
             {% endif %}
         </div>
-    </div>
-
     </div>
 </div>
 
