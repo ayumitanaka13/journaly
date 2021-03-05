@@ -1346,7 +1346,13 @@ form {
   overflow: scroll;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  width: 80%;
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .user-style{
+    width: 80%;
+  }
 }
 
 @media (min-width: 1280px){

@@ -133,7 +133,7 @@
     }
     /* user.html */
     .user-style {
-        @apply h-5/6 w-4/5 xl:w-1/2 overflow-scroll py-4;
+        @apply h-5/6 w-full sm:w-4/5 xl:w-1/2 overflow-scroll py-4;
     }
     .wrap-style {
         @apply w-full flex flex-wrap justify-center mt-4 lg:mt-8;
