@@ -1305,7 +1305,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   --tw-text-opacity: 1;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
   width: 83.333333%;
 }
 
@@ -1622,6 +1622,8 @@ form {
   font-size: 3.75rem;
   line-height: 1;
   text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
 @media (min-width: 1280px){
@@ -2008,7 +2010,7 @@ form {
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-text-opacity: 1;
-  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
   width: 100%;
   transition-duration: 300ms;
 }

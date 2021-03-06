@@ -123,7 +123,7 @@
         @apply h-full lg:h-auto w-full sm:w-4/5 xl:w-3/5 2xl:w-1/2 overflow-scroll pt-10;
     }
     .add-form-style {
-        @apply w-5/6 lg:w-2/3 flex flex-wrap lg:flex-nowrap text-gray-700;
+        @apply w-5/6 lg:w-2/3 flex flex-wrap lg:flex-nowrap text-gray-600;
     }
     .add-form-left-style {
         @apply w-full lg:w-1/3 flex flex-wrap content-between lg:pr-2;
@@ -179,7 +179,7 @@
         @apply text-center text-6xl md:text-7xl lg:text-8xl xl:text-9xl;
     }
     .subtitle {
-        @apply text-center text-6xl xl:text-7xl;
+        @apply text-gray-700 text-center text-6xl xl:text-7xl;
     }
     /* button */
     .btn-lightorange {
@@ -209,7 +209,7 @@
         @apply w-3/4 sm:w-2/3;
     }
     .input-form {
-        @apply h-10 w-full font-josefin bg-white bg-opacity-50 hover:bg-opacity-90 focus:bg-opacity-90 text-gray-500 focus:outline-none rounded-full shadow duration-300 text-sm sm:text-base py-1 sm:py-2 px-2 sm:px-4;
+        @apply h-10 w-full font-josefin bg-white bg-opacity-50 hover:bg-opacity-90 focus:bg-opacity-90 text-gray-600 focus:outline-none rounded-full shadow duration-300 text-sm sm:text-base py-1 sm:py-2 px-2 sm:px-4;
     }
     /* transform */
     .transform-scale {
