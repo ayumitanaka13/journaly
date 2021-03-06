@@ -5,7 +5,7 @@
 
 @layer base {
     body {
-        @apply　bg-beige text-gray-700;
+        @apply text-gray-600;
     }
     h1 {
         @apply font-aurore;
