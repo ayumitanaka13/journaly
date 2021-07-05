@@ -35,7 +35,7 @@ Read Page
 Search Page
 <img width="1440" alt="work-2c" src="https://user-images.githubusercontent.com/55824449/124364806-a9148a00-dbf8-11eb-822e-bb70268536c2.png">
 
-## Technologies Used
+## Technologies
 
 - Python Flask
 - Jinja
