@@ -2,9 +2,25 @@
 
 ## About
 
-This is a web app that stands for journal + journey.
+### What is this app?
 
+This is a web app that stands for journal + journey.
 Users can post journals about their journey after sign up. Also, users can browse other people's journals and save favorite journals.
+
+### Why I created this app?
+
+I created this app to learn how the web app works.
+Since I've been learning front-end, I wasn't familiar with back-end.
+Creating this app was a good opportunity to learn to code with Python Flask, and to use SQ Lite.
+
+### How I build this app?
+
+This app is nearly a CRUD app that has MVC architecture.
+I said nearly because this app doesn't allow users to delete user's info.
+So this is an upcoming feature!
+
+Thanks to the Flask Blueprint module, I partitioned app functions as small as possible.
+As a result, I improved the maintainability of this app.
 
 ## Preview
 
